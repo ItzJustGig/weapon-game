@@ -14,6 +14,7 @@ public class MachineGunItem : ActiveItem
     {
         for (int i = 0; i < bulletNumber; i++)
         {
+
             FindAnyObjectByType<PlayerAttackManager>().attackQueue.Add(new AttackQueueObject(bulletInterval*i, lifeTime, travelSpeed, damage, bullet));
         }
     }

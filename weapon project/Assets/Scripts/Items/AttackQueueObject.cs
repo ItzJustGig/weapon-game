@@ -1,6 +1,7 @@
 using UnityEngine;
 
-public class AttackQueueObject : MonoBehaviour
+[System.Serializable]
+public class AttackQueueObject
 {
     public float delay; 
     public float lifeTime;
@@ -17,13 +18,13 @@ public class AttackQueueObject : MonoBehaviour
         this.projectile = projectile;
     }
 
-    public void Spawn()
+    public void Spawn(float bonusLifeTime, float bonusTravelSpeed, float bonusDamage)
     {
         // Find the player's position
-        Vector3 spawnPosition = FindAnyObjectByType<PlayerCtrl>().transform.position;
+        Vector3 spawnPosition = GameObject.FindAnyObjectByType<PlayerCtrl>().transform.position;
 
         // Instantiate the bullet at the player's position with no rotation
-        GameObject obj = Instantiate(projectile, spawnPosition, Quaternion.identity);
-        obj.GetComponent<Projectile>().Setup(lifeTime, travelSpeed, damage);
+        GameObject obj = GameObject.Instantiate(projectile, spawnPosition, Quaternion.identity);
+        obj.GetComponent<Projectile>().Setup(lifeTime+bonusLifeTime, travelSpeed+bonusTravelSpeed, damage+bonusDamage);
     }
 }

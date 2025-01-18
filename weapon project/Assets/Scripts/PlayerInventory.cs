@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerInventory : MonoBehaviour
 {
+    public Stats bonusStats;
     public List<Item> items;
 
     private void Update()

@@ -15,7 +15,7 @@ public class PlayerAttackManager : MonoBehaviour
 
             if (atk.delay <= 0)
             {
-                atk.Spawn();
+                atk.Spawn(0, 0, 0);
                 attackQueue.RemoveAt(i);
             }
         }
