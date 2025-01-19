@@ -18,7 +18,7 @@ public class Health : MonoBehaviour
                 health = numOfHearts;
             }
     // Lembrar otimizar o código e meter a funcionar, por algum motivo it doesnt work how i expected
-        for (int i = 0; i < hearts.Length; i++) {
+            for (int i = 0; i < hearts.Length; i++) {
             if(i < health){
                 hearts[i].sprite = fullHearts;
             } else {
