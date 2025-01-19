@@ -109,21 +109,37 @@ public class RoomManager : MonoBehaviour
         {
             newRoomScript.OpenDoor(Vector2Int.left);
             leftRoomScript.OpenDoor(Vector2Int.right);
+
+            // Guarda os destinos das portas nas portas
+            newRoomScript.leftDoor.GetComponent<Door>().myDestinationPos = GetPositionFromGridIndex(leftRoomScript.RoomIndex);
+            leftRoomScript.rightDoor.GetComponent<Door>().myDestinationPos = GetPositionFromGridIndex(newRoomScript.RoomIndex);
         }
         if (x < gridSizeX - 1 && roomGrid[x + 1, y] != 0)
         {
             newRoomScript.OpenDoor(Vector2Int.right);
             rightRoomScript.OpenDoor(Vector2Int.left);
+
+            // Guarda os destinos das portas nas portas
+            newRoomScript.rightDoor.GetComponent<Door>().myDestinationPos = GetPositionFromGridIndex(rightRoomScript.RoomIndex);
+            rightRoomScript.leftDoor.GetComponent<Door>().myDestinationPos = GetPositionFromGridIndex(newRoomScript.RoomIndex);
         }
         if (y > 0 && roomGrid[x, y - 1] != 0) 
         {
             newRoomScript.OpenDoor(Vector2Int.down);
             bottomRoomScript.OpenDoor(Vector2Int.up);
+
+            // Guarda os destinos das portas nas portas
+            newRoomScript.bottomDoor.GetComponent<Door>().myDestinationPos = GetPositionFromGridIndex(bottomRoomScript.RoomIndex);
+            bottomRoomScript.topDoor.GetComponent<Door>().myDestinationPos = GetPositionFromGridIndex(newRoomScript.RoomIndex);
         }
         if (y < gridSizeY - 1 && roomGrid[x, y + 1] != 0) 
         {
             newRoomScript.OpenDoor(Vector2Int.up);
             upperRoomScript.OpenDoor(Vector2Int.down);
+
+            // Guarda os destinos das portas nas portas
+            newRoomScript.topDoor.GetComponent<Door>().myDestinationPos = GetPositionFromGridIndex(upperRoomScript.RoomIndex);
+            upperRoomScript.bottomDoor.GetComponent<Door>().myDestinationPos = GetPositionFromGridIndex(newRoomScript.RoomIndex);
         }
     }
 

@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class Room : MonoBehaviour
 {
-    [SerializeField] GameObject topDoor;
-    [SerializeField] GameObject rightDoor;
-    [SerializeField] GameObject bottomDoor;
-    [SerializeField] GameObject leftDoor;
+    [SerializeField] public GameObject topDoor;
+    [SerializeField] public GameObject rightDoor;
+    [SerializeField] public GameObject bottomDoor;
+    [SerializeField] public GameObject leftDoor;
 
     public Vector2Int RoomIndex { get; set; }
 
