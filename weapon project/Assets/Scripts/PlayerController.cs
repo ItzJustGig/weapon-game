@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class PlayerCtrl : MonoBehaviour
 {
+    public float movSpeed = 5f; 
+    public float acceleration = 10f;
+    public float deceleration = 5f;
 
+    private Rigidbody2D rb;
+    private Vector2 targetVelocity;
 
-    public float movSpeed;
-    float speedX, speedY;
-    Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();  
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -20,11 +22,21 @@ public class PlayerCtrl : MonoBehaviour
     {
         float inputX = Input.GetAxisRaw("Horizontal");
         float inputY = Input.GetAxisRaw("Vertical");
-    
-        Vector2 movement = new Vector2(inputX, inputY);
 
-        movement = movement.normalized * movSpeed;
+        Vector2 inputVector = new Vector2(inputX, inputY).normalized;
+        targetVelocity = inputVector * movSpeed;
+    }
 
-        rb.linearVelocity = movement;
+    void FixedUpdate()
+    {
+        // Acelaração
+        if (targetVelocity.magnitude > 0.1f) 
+        {
+            rb.linearVelocity = Vector2.Lerp(rb.linearVelocity, targetVelocity, acceleration * Time.fixedDeltaTime);
+        }
+        else // Desacelaração Gradual
+        {
+            rb.linearVelocity = Vector2.Lerp(rb.linearVelocity, Vector2.zero, deceleration * Time.fixedDeltaTime);
+        }
     }
 }
