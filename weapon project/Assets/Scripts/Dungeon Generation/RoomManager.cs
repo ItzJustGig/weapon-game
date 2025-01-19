@@ -60,7 +60,7 @@ public class RoomManager : MonoBehaviour
 
             if(!GenerateBossRoom()){
                 Debug.Log("Wasn't able to add boss room. Retrying.");
-
+                RegenerateRooms();
             }
         } 
     }
