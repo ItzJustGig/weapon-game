@@ -1,7 +1,7 @@
 using System.Linq;
 using UnityEngine;
 
-public class ElectroBullet : PassiveItem
+public class Mag : PassiveItem
 {
     public Color color;
 

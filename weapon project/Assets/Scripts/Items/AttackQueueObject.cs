@@ -1,4 +1,6 @@
+using System;
 using UnityEngine;
+using System.Collections.Generic;
 
 [System.Serializable]
 public class AttackQueueObject
@@ -18,13 +20,16 @@ public class AttackQueueObject
         this.projectile = projectile;
     }
 
-    public void Spawn(float bonusLifeTime, float bonusTravelSpeed, float bonusDamage)
+    public GameObject Spawn(float bonusLifeTime, float bonusTravelSpeed, float bonusDamage)
     {
         // Find the player's position
         Vector3 spawnPosition = GameObject.FindAnyObjectByType<PlayerCtrl>().transform.position;
+        spawnPosition.x += Input.GetAxisRaw("Horizontal");
+        spawnPosition.y += Input.GetAxisRaw("Vertical");
 
         // Instantiate the bullet at the player's position with no rotation
         GameObject obj = GameObject.Instantiate(projectile, spawnPosition, Quaternion.identity);
-        obj.GetComponent<Projectile>().Setup(lifeTime+bonusLifeTime, travelSpeed+bonusTravelSpeed, damage+bonusDamage);
+        obj.GetComponent<Projectile>().Setup(new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"), 0), lifeTime+bonusLifeTime, travelSpeed+bonusTravelSpeed, damage+bonusDamage);
+        return obj;
     }
 }

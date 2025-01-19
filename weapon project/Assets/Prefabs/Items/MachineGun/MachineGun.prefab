@@ -51,9 +51,9 @@ MonoBehaviour:
   charging: 0
   cooldown: 0
   lifeTime: 2
-  travelSpeed: 2
+  travelSpeed: 9
   damage: 2
-  bulletInterval: 0.2
+  bulletInterval: 0.15
   bulletNumber: 3
   bullet: {fileID: 5656741699765515524, guid: 5c44321bd97a96b4fbe4f89344d6745c, type: 3}
 --- !u!1 &4774232432258067429

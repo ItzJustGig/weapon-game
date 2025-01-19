@@ -7,6 +7,14 @@ public class PlayerInventory : MonoBehaviour
     public Stats bonusStats;
     public List<Item> items;
 
+    private void Start()
+    {
+        foreach (Item item in items)
+        {
+            item.Initialize();
+        }
+    }
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
