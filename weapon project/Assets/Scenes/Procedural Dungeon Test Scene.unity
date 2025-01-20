@@ -229,8 +229,8 @@ MonoBehaviour:
   maxRooms: 15
   roomWidth: 20
   roomHeight: 12
-  gridSizeX: 16
-  gridSizeY: 16
+  gridSizeX: 30
+  gridSizeY: 30
 --- !u!1 &1682888506
 GameObject:
   m_ObjectHideFlags: 0
