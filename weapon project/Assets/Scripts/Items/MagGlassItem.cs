@@ -1,9 +1,9 @@
 using System.Linq;
 using UnityEngine;
 
-public class ElectroBullet : PassiveItem
+public class MagGlassItem : PassiveItem
 {
-    public Color color;
+    public float bonusSize;
 
     public override void Initialize()
     {
@@ -20,9 +20,14 @@ public class ElectroBullet : PassiveItem
 
     private void OnBulletFired(GameObject proj)
     {
-        if (proj.GetComponent<Projectile>() != null && proj.GetComponent<Projectile>().type is Projectile.DamageType.BULLET)
+        if (proj.GetComponent<Projectile>() != null && proj.GetComponent<Projectile>().type is Projectile.DamageType.ELEMENTAL)
         {
-            proj.GetComponentInChildren<SpriteRenderer>().color = color;
+            Vector3 temp = proj.transform.localScale;
+
+            temp.x += temp.x * bonusSize;
+            temp.y += temp.y * bonusSize;
+
+            proj.transform.localScale = temp;
         }
     }
 

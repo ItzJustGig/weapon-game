@@ -11,4 +11,15 @@ public class Stats
     public float projectileSpeed;
     public float projectileLifeTime;
     public float projectileTravelSpeed;
+
+    public void AddStats(Stats bonus)
+    {
+        hp += bonus.hp;
+        damage += bonus.damage;
+        movSpeed += bonus.movSpeed;
+        attackSpeed += bonus.attackSpeed;
+        projectileSpeed += bonus.projectileSpeed;
+        projectileLifeTime += bonus.projectileLifeTime;
+        projectileTravelSpeed += bonus.projectileTravelSpeed;
+    }
 }

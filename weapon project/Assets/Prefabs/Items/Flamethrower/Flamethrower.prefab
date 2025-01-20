@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 297289445261345632}
-  - component: {fileID: -3138968594072106447}
+  - component: {fileID: 490735095478297788}
   m_Layer: 0
-  m_Name: Glock
+  m_Name: Flamethrower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,10 +30,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 6159245225323235075}
+  - {fileID: 1134807514532960974}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-3138968594072106447
+--- !u!114 &490735095478297788
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -42,19 +42,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 1870809456527969197}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e3c1be1a0a76bc43abf82fa1e706a32, type: 3}
+  m_Script: {fileID: 11500000, guid: e4d8da40d18f8304f9ffc2bd79439832, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: Glock
-  icon: {fileID: 6656814654079848548, guid: 8d18b3883977e2a4f9be1e54387ed144, type: 3}
+  name: Flamethrower
+  icon: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   rarity: 0
   charging: 0
-  cooldown: 2
-  lifeTime: 3
-  travelSpeed: 8
-  damage: 5
-  bullet: {fileID: 5656741699765515524, guid: 5c44321bd97a96b4fbe4f89344d6745c, type: 3}
---- !u!1 &2030765053405273488
+  cooldown: 0
+  lifeTime: 0.4
+  travelSpeed: 12
+  damage: 3
+  fireDuration: 1
+  bullet: {fileID: 5656741699765515524, guid: 669634aab87a9eb47ad1e4ce7bc91018, type: 3}
+--- !u!1 &4774232432258067429
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -62,8 +63,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6159245225323235075}
-  - component: {fileID: 5980416067509362792}
+  - component: {fileID: 1134807514532960974}
+  - component: {fileID: 4755354230452378019}
   m_Layer: 0
   m_Name: Circle
   m_TagString: Untagged
@@ -71,13 +72,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6159245225323235075
+--- !u!4 &1134807514532960974
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2030765053405273488}
+  m_GameObject: {fileID: 4774232432258067429}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -86,13 +87,13 @@ Transform:
   m_Children: []
   m_Father: {fileID: 297289445261345632}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &5980416067509362792
+--- !u!212 &4755354230452378019
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2030765053405273488}
+  m_GameObject: {fileID: 4774232432258067429}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
