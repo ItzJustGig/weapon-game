@@ -1,7 +1,15 @@
+using TMPro;
 using UnityEngine;
 
 public class PlayerPickUp : MonoBehaviour
 {
+    [SerializeField]
+    private Animator textAnimator;
+    [SerializeField]
+    private TextMeshProUGUI textTitle;
+    [SerializeField]
+    private TextMeshProUGUI textDesc;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision != null && collision.CompareTag("Items")){
@@ -22,6 +30,10 @@ public class PlayerPickUp : MonoBehaviour
             if (!cancel)
             {
                 FindAnyObjectByType<EventManager>().PickUpItem();
+
+                textTitle.text = floorItem.item.name;
+                textDesc.text = floorItem.item.desc;
+                textAnimator.SetTrigger("pickup");
 
                 floorItem.item.OnPickUp();
                 floorItem.item.Initialize();

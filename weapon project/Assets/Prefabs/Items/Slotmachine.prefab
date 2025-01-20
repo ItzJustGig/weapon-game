@@ -45,7 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89b0737c2c032c64ba83515d480bb288, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: 
+  name: Slot Machine
+  desc: Im not addicted I swear!
   icon: {fileID: -6503962825414336194, guid: 8d18b3883977e2a4f9be1e54387ed144, type: 3}
   rarity: 0
   charging: 0

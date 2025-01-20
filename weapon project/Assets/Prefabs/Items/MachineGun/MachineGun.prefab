@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Machine Gun
+  desc: Time for the big guns
   icon: {fileID: -6503962825414336194, guid: 8d18b3883977e2a4f9be1e54387ed144, type: 3}
   rarity: 1
   charging: 0
