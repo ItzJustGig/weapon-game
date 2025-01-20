@@ -7,8 +7,10 @@ public class RoomManager : MonoBehaviour
     [SerializeField] GameObject roomPrefab;
     [SerializeField] GameObject startRoomPrefab;
     [SerializeField] GameObject bossRoomPrefab;
-    [SerializeField] private int minRooms = 7;
-    [SerializeField] private int maxRooms = 12;
+    [SerializeField] GameObject shopRoomPrefab;
+    [SerializeField] GameObject itemRoomPrefab;
+    [SerializeField] private int minRooms = 10;
+    [SerializeField] private int maxRooms = 15;
 
     [SerializeField] int roomWidth = 20;
     [SerializeField] int roomHeight = 12;
@@ -23,6 +25,8 @@ public class RoomManager : MonoBehaviour
     private int[,] roomGrid;
 
     private int roomCount;
+    private bool madeShop = false;
+    private bool madeItemRoom = false;
     private bool generationComplete = false;
 
 
@@ -74,7 +78,7 @@ public class RoomManager : MonoBehaviour
         AddRoomToLevel(roomIndex, true);
     }
 
-    private void AddRoomToLevel(Vector2Int roomIndex, bool isStartRoom = false, bool isBossRoom = false)
+    private void AddRoomToLevel(Vector2Int roomIndex, bool isStartRoom = false, bool isBossRoom = false, bool isShopRoom = false, bool isItemRoom = false)
     {
         roomGrid[roomIndex.x, roomIndex.y] = 1; // Declara no mapa a existência desta sala.
 
@@ -95,6 +99,24 @@ public class RoomManager : MonoBehaviour
             roomObjects.Add(startRoom); // Guarda a referência deste GameObject numa lista. 
             OpenDoors(startRoom, roomIndex.x, roomIndex.y);  
         }
+        else if (isShopRoom)
+        {
+            var shopRoom = Instantiate(shopRoomPrefab, GetPositionFromGridIndex(roomIndex), Quaternion.identity); // Instanceia o primeiro quarto no centro sem alterações de rotação.
+            roomCount++;
+            shopRoom.name = $"Room-Shop";
+            shopRoom.GetComponent<Room>().RoomIndex = roomIndex; // Guarda as coordenadas de mapa do quarto no quarto.
+            roomObjects.Add(shopRoom); // Guarda a referência deste GameObject numa lista. 
+            OpenDoors(shopRoom, roomIndex.x, roomIndex.y);  
+        }
+        else if (isItemRoom)
+        {
+            var itemRoom = Instantiate(itemRoomPrefab, GetPositionFromGridIndex(roomIndex), Quaternion.identity); // Instanceia o primeiro quarto no centro sem alterações de rotação.
+            roomCount++;
+            itemRoom.name = $"Room-Item";
+            itemRoom.GetComponent<Room>().RoomIndex = roomIndex; // Guarda as coordenadas de mapa do quarto no quarto.
+            roomObjects.Add(itemRoom); // Guarda a referência deste GameObject numa lista. 
+            OpenDoors(itemRoom, roomIndex.x, roomIndex.y);  
+        }
         else
         {
             var regularRoom = Instantiate(roomPrefab, GetPositionFromGridIndex(roomIndex), Quaternion.identity); // Instanceia o primeiro quarto no centro sem alterações de rotação.
@@ -114,20 +136,120 @@ public class RoomManager : MonoBehaviour
         if (CountAdjacentRooms(roomIndex) > 1 || // Não permite mais que três quartos ligados
         roomGrid[x, y] != 0 || // Não permite room overlapping
         roomCount >= maxRooms ||
-        UnityEngine.Random.value < 0.5f && roomIndex != Vector2.zero) // Uma maneira de tornar a criação mais "aleatória"
+        UnityEngine.Random.value < 0.5f) // Uma maneira de tornar a criação mais "aleatória"
             return false;
 
         roomQueue.Enqueue(roomIndex); // Coloca as coordenadas no início da fila para a posição da próxima criação se basear nela.
 
-        /*
-        var newRoom = Instantiate(roomPrefab, GetPositionFromGridIndex(roomIndex), Quaternion.identity); // Instanceia o primeiro quarto no centro sem alterações de rotação.
-        newRoom.GetComponent<Room>().RoomIndex = roomIndex; // Guarda as coordenadas de mapa do quarto no quarto.
-        newRoom.name = $"Room-{roomCount}";
-        roomObjects.Add(newRoom); // Guarda a referência deste GameObject numa lista.*/
+        if (roomCount > 2 && !madeShop) 
+        {
+            if (!TryGenerateShop(roomIndex)) 
+            {
+                Debug.Log("Couldn't make the shop for whatever reason. Retrying!");
+                RegenerateRooms();
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+
+        }
+
+        if (roomCount >= minRooms - 2 && !madeItemRoom) 
+        {
+            if (!TryGenerateItemRoom(roomIndex)) 
+            {
+                Debug.Log("Couldn't make the item room for whatever reason. Retrying!");
+                RegenerateRooms();
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+
+        }
 
         AddRoomToLevel(roomIndex);
 
         return true;
+    }
+
+    private bool TryGenerateShop(Vector2Int roomIndex)
+    {
+        // Verifica se no quadrado acima consigo criar uma shop que vá ter só uma entrada!
+        if (CountAdjacentRooms(new Vector2Int(roomIndex.x, roomIndex.y - 1)) == 0 && roomGrid[roomIndex.x, roomIndex.y - 1] == 0) 
+        {
+            AddRoomToLevel(roomIndex); // Faz quarto normal neste lugar, é por isso que == 0 no AdjacentRooms (este quarto vai ser a unica ligação)
+            madeShop = true;
+            AddRoomToLevel(new Vector2Int(roomIndex.x, roomIndex.y - 1), false, false, true); // mete quarto acima para próxima iteração não conseguir subir
+            return true;
+        }
+
+        if (CountAdjacentRooms(new Vector2Int(roomIndex.x, roomIndex.y + 1)) == 0 && roomGrid[roomIndex.x, roomIndex.y + 1] == 0) 
+        {
+            AddRoomToLevel(roomIndex); // Faz quarto normal neste lugar, é por isso que == 0 no AdjacentRooms (este quarto vai ser a unica ligação)
+            madeShop = true;
+            AddRoomToLevel(new Vector2Int(roomIndex.x, roomIndex.y + 1), false, false, true); // mete quarto abaixo para próxima iteração não conseguir descer
+            return true;
+        }
+
+        if (CountAdjacentRooms(new Vector2Int(roomIndex.x + 1, roomIndex.y)) == 0 && roomGrid[roomIndex.x + 1, roomIndex.y] == 0) 
+        {
+            AddRoomToLevel(roomIndex); // Faz quarto normal neste lugar, é por isso que == 0 no AdjacentRooms (este quarto vai ser a unica ligação)
+            madeShop = true;
+            AddRoomToLevel(new Vector2Int(roomIndex.x + 1, roomIndex.y), false, false, true); // mete quarto direita para próxima iteração não conseguir ir para direita
+            return true;
+        }
+
+        if (CountAdjacentRooms(new Vector2Int(roomIndex.x - 1, roomIndex.y)) == 0 && roomGrid[roomIndex.x - 1, roomIndex.y] == 0) 
+        {
+            AddRoomToLevel(roomIndex); // Faz quarto normal neste lugar, é por isso que == 0 no AdjacentRooms (este quarto vai ser a unica ligação)
+            madeShop = true;
+            AddRoomToLevel(new Vector2Int(roomIndex.x - 1, roomIndex.y), false, false, true); // mete quarto esqerda para próxima iteração não conseguir ir para esquerda 
+            return true;
+        }
+
+        return false;
+    }
+
+    private bool TryGenerateItemRoom(Vector2Int roomIndex)
+    {
+        // Verifica se no quadrado acima consigo criar uma shop que vá ter só uma entrada!
+        if (CountAdjacentRooms(new Vector2Int(roomIndex.x, roomIndex.y - 1)) == 0 && roomGrid[roomIndex.x, roomIndex.y - 1] == 0) 
+        {
+            AddRoomToLevel(roomIndex); // Faz quarto normal neste lugar, é por isso que == 0 no AdjacentRooms (este quarto vai ser a unica ligação)
+            madeItemRoom = true;
+            AddRoomToLevel(new Vector2Int(roomIndex.x, roomIndex.y - 1), false, false, false, true); // mete quarto acima para próxima iteração não conseguir subir
+            return true;
+        }
+
+        if (CountAdjacentRooms(new Vector2Int(roomIndex.x, roomIndex.y + 1)) == 0 && roomGrid[roomIndex.x, roomIndex.y + 1] == 0) 
+        {
+            AddRoomToLevel(roomIndex); // Faz quarto normal neste lugar, é por isso que == 0 no AdjacentRooms (este quarto vai ser a unica ligação)
+            madeItemRoom = true;
+            AddRoomToLevel(new Vector2Int(roomIndex.x, roomIndex.y + 1), false, false, false, true); // mete quarto abaixo para próxima iteração não conseguir descer
+            return true;
+        }
+
+        if (CountAdjacentRooms(new Vector2Int(roomIndex.x + 1, roomIndex.y)) == 0 && roomGrid[roomIndex.x + 1, roomIndex.y] == 0) 
+        {
+            AddRoomToLevel(roomIndex); // Faz quarto normal neste lugar, é por isso que == 0 no AdjacentRooms (este quarto vai ser a unica ligação)
+            madeItemRoom = true;
+            AddRoomToLevel(new Vector2Int(roomIndex.x + 1, roomIndex.y), false, false, false, true); // mete quarto direita para próxima iteração não conseguir ir para direita
+            return true;
+        }
+
+        if (CountAdjacentRooms(new Vector2Int(roomIndex.x - 1, roomIndex.y)) == 0 && roomGrid[roomIndex.x - 1, roomIndex.y] == 0) 
+        {
+            AddRoomToLevel(roomIndex); // Faz quarto normal neste lugar, é por isso que == 0 no AdjacentRooms (este quarto vai ser a unica ligação)
+            madeItemRoom = true;
+            AddRoomToLevel(new Vector2Int(roomIndex.x - 1, roomIndex.y), false, false, false, true); // mete quarto esqerda para próxima iteração não conseguir ir para esquerda 
+            return true;
+        }
+
+        return false;
     }
 
     private bool GenerateBossRoom()
@@ -247,6 +369,8 @@ public class RoomManager : MonoBehaviour
         roomQueue.Clear();
         roomCount = 0;
         generationComplete = false;
+        madeShop = false;
+        madeItemRoom = false;
 
         Vector2Int initialRoomIndex = new Vector2Int(gridSizeX / 2, gridSizeY / 2);
         StartRoomGenerationFromRoom(initialRoomIndex);
