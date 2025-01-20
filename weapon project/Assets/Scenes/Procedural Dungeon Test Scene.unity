@@ -223,8 +223,10 @@ MonoBehaviour:
   roomPrefab: {fileID: 2152164733582247948, guid: 8bd8fd22b52c2c849a99875365ea9b1f, type: 3}
   startRoomPrefab: {fileID: 2152164733582247948, guid: bac47f10c68df7f4fbcbfbb57fd24ee2, type: 3}
   bossRoomPrefab: {fileID: 2152164733582247948, guid: 5ff88bd44a9803940a00d695d613f06a, type: 3}
-  minRooms: 7
-  maxRooms: 12
+  shopRoomPrefab: {fileID: 2152164733582247948, guid: e7af03423bea2484eaa3fa3816bb6537, type: 3}
+  itemRoomPrefab: {fileID: 2152164733582247948, guid: 3f4887f0daf9b6046a41519309f73403, type: 3}
+  minRooms: 10
+  maxRooms: 15
   roomWidth: 20
   roomHeight: 12
   gridSizeX: 16
