@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class FlameThrowerItem : ActiveItem
 {
+    [Header("Special Stats")]
     public float lifeTime;
     public float travelSpeed;
     public float damage;

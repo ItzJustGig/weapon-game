@@ -10,6 +10,11 @@ public class FloorItem : MonoBehaviour
 
     private void Start()
     {
+        ForceStart();
+    }
+
+    public void ForceStart()
+    {
         itemIcon.sprite = item.icon;
     }
 }
