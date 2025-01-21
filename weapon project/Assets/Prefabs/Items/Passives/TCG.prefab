@@ -48,7 +48,7 @@ MonoBehaviour:
   name: TCG Card
   desc: It's time to duel!
   icon: {fileID: -6503962825414336194, guid: 8d18b3883977e2a4f9be1e54387ed144, type: 3}
-  rarity: 0
+  rarity: 3
   charging: 0
   cooldown: 0
   modifier:
