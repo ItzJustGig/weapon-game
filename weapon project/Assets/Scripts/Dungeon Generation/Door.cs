@@ -5,23 +5,26 @@ public class Door : MonoBehaviour
 {
     [SerializeField] static private float cameraMoveSpeed = 125.0f;
     public Vector3 myDestinationPos; // A posição central do quarto a que esta porta lida.
-    static private GameObject camera; // Referência à camera para mudar a posição dela quando player muda de quarto
+    static private GameObject mainCamera; // Referência à camera para mudar a posição dela quando player muda de quarto
+    static private GameObject minimapCamera; // Referência à camera do minimapa para mudar a posição dela quando player muda de quarto
     static private GameObject player; // Referência ao player para mudar a posição dele quando mudar de quarto
-    private bool moveCamera = false;
+    private bool moveCameras = false;
 
     private void Start() {
-        camera = GameObject.FindWithTag("MainCamera");
+        mainCamera = GameObject.FindWithTag("MainCamera");
+        minimapCamera = GameObject.FindWithTag("Minimap");
         player = GameObject.FindWithTag("Player");
     }
 
     private void Update() 
     {
-        if (moveCamera)
+        if (moveCameras)
         {
-            camera.transform.position = Vector3.MoveTowards(camera.transform.position , new Vector3(myDestinationPos.x, myDestinationPos.y, -10), cameraMoveSpeed * Time.deltaTime);
-            
-            if (camera.transform.position == new Vector3(myDestinationPos.x, myDestinationPos.y, -10))
-                moveCamera = false;
+            mainCamera.transform.position = Vector3.MoveTowards(mainCamera.transform.position , new Vector3(myDestinationPos.x, myDestinationPos.y, -10), cameraMoveSpeed * Time.deltaTime);
+            minimapCamera.transform.position = Vector3.MoveTowards(minimapCamera.transform.position , new Vector3(myDestinationPos.x, myDestinationPos.y, -10), cameraMoveSpeed * Time.deltaTime);
+
+            if (minimapCamera.transform.position == new Vector3(myDestinationPos.x, myDestinationPos.y, -10))
+                moveCameras = false;
         }
     }
 
@@ -34,8 +37,7 @@ public class Door : MonoBehaviour
 
     private void ChangeRooms()
     {
-        moveCamera = true;
-        //camera.transform.position = new Vector3(myDestinationPos.x, myDestinationPos.y, -10);
+        moveCameras = true;
         player.transform.position = myDestinationPos;
     }
 }
