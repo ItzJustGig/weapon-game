@@ -37,6 +37,7 @@ public class EventManager : MonoBehaviour
     {
         OnBulletFired?.Invoke(proj);
     }
+    //test
 
     public void PickUpItem()
     {
