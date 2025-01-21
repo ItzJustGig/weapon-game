@@ -42,4 +42,5 @@ public class EventManager : MonoBehaviour
     {
         OnItemPickedUp?.Invoke();
     }
+    
 }
