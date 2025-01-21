@@ -35,9 +35,15 @@ public class Door : MonoBehaviour
         }
     }
 
+    public void ToggleLock(bool open)
+    {
+        GetComponentInChildren<Collider2D>().enabled = false;
+    }
+
     private void ChangeRooms()
     {
         moveCameras = true;
         player.transform.position = myDestinationPos;
     }
+
 }
