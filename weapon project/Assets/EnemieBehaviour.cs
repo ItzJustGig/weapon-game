@@ -85,8 +85,8 @@ public class EnemieBehaviour : MonoBehaviour
 
         
         
-        Debug.Log("timeIdle: "+timeIdle);
-        Debug.Log("timeMoving: " + timeMoving);
+       // Debug.Log("timeIdle: "+timeIdle);
+       // Debug.Log("timeMoving: " + timeMoving);
     }
 
     private void ChangeRandomDirection()

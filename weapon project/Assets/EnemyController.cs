@@ -19,10 +19,18 @@ public class EnemyController : MonoBehaviour
     public EnemyState currState = EnemyState.Wander;
 
     public float range;
+    public float attackRange;
     public float speed;
+    public float attackCooldown;
+    public float lastAttackTime = 0f;
+
+    public bool ableToMove = true;
+
     private bool chooseDirection = false;
     private bool dead = false;
     private Vector3 randomDirection;
+    
+
 
 
 
@@ -44,6 +52,10 @@ public class EnemyController : MonoBehaviour
 
             case (EnemyState.Follow):
                 Follow();
+                if (IsPlayerInAttackRange(attackRange))
+                {
+                    Attack();
+                }
             break;
 
             case (EnemyState.Die):
@@ -63,7 +75,14 @@ public class EnemyController : MonoBehaviour
 
     private bool IsPlayerInRange(float range)
     {
+        
         return Vector3.Distance(transform.position, player.transform.position) <= range;
+
+    }
+
+    protected bool IsPlayerInAttackRange(float attackRange)
+    {
+        return Vector3.Distance(transform.position, player.transform.position) <= attackRange;
     }
 
     private IEnumerator ChooseDirection()
@@ -75,7 +94,7 @@ public class EnemyController : MonoBehaviour
         transform.rotation = Quaternion.Lerp(transform.rotation, nextRotation, Random.Range(0.5f, 2.5f));
         chooseDirection = false;
     }
-    void Wander() 
+    public virtual void Wander() 
     {
         if (!chooseDirection)
         {
@@ -90,13 +109,29 @@ public class EnemyController : MonoBehaviour
         }
 
     }
-    void Follow()
+    public virtual void Follow()
     {
+
+        if(ableToMove)
         transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
 
     }
 
-    public void Death()
+    public virtual void StopMoving()
+    {
+        ableToMove = false;
+    }
+    public virtual void ResumeMoving()
+    {
+        ableToMove = true;
+    }
+
+    public virtual void Attack()
+    {
+    
+    }
+
+    public virtual void Death()
     {
         Destroy(gameObject);
     }
