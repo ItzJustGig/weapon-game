@@ -15,6 +15,7 @@ public class FloorItem : MonoBehaviour
 
     public void ForceStart()
     {
-        itemIcon.sprite = item.icon;
+        if (item != null)
+            itemIcon.sprite = item.icon;
     }
 }

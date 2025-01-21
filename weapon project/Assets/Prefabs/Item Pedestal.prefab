@@ -185,6 +185,7 @@ GameObject:
   - component: {fileID: 1301883151650172673}
   - component: {fileID: 5283385417199112362}
   - component: {fileID: 4617847256589867065}
+  - component: {fileID: 9108123459455841798}
   m_Layer: 0
   m_Name: Item Pedestal
   m_TagString: Items
@@ -269,3 +270,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.48834908, y: 0.6390407}
   m_EdgeRadius: 0
+--- !u!114 &9108123459455841798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7449217395408643048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 022e7826992ccb34abd3236fa7316458, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activeItemsGO: {fileID: 8377077957225571060, guid: 5b7569e7f1f19ad4c973ed4ff7cbf431, type: 3}
+  passiveItemsGO: {fileID: 8377077957225571060, guid: b13c2c5bfad14ca45abda37797a90941, type: 3}
+  floorItem: {fileID: 5283385417199112362}
