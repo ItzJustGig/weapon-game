@@ -7,6 +7,6 @@ public class CameraCanvas : MonoBehaviour
     private void Start()
     {
         canvas = GetComponent<Canvas>();
-        canvas.worldCamera = FindAnyObjectByType<Camera>();
+        canvas.worldCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
     }
 }
