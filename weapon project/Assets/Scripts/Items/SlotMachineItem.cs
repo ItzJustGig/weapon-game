@@ -22,6 +22,8 @@ public class SlotMachineItem : ActiveItem
 
     public override void Active(Vector2 direction)
     {
+        //Direction is not used here
+
         int result = Random.Range(0, 4 + 1);
 
         switch (result)
