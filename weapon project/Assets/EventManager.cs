@@ -34,7 +34,7 @@ public class EventManager : MonoBehaviour
     public static event Action OnExitRoom;
     public static event Action OnBossKill;
     public static event Action OnEnemyKill;
-
+    public static event Action OnPlayerDamaged;
     private void Awake()
     {
         if (Instance == null)
@@ -61,5 +61,10 @@ public class EventManager : MonoBehaviour
     public void EnemyKilled()
     {
         OnEnemyKill?.Invoke();
+    }
+
+    public void OnDamage()
+    {
+        OnPlayerDamaged?.Invoke();
     }
 }

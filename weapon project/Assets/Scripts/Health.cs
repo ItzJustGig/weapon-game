@@ -5,46 +5,38 @@ using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
-    public int health;
-    // Número de Corações
-    public int numOfHearts;
+    public Sprite fullHeart, halfHeart, emptyHeart;
+    Image heartImage;
 
-    // Imagem de corações
-    public Image[] hearts;
-    // Sprites de vida
-    public Sprite fullHearts;
-    public Sprite emptyHearts;
-    
-
-    void Update()
-    {
+    private void Awake(){
+        heartImage = GetComponent<Image>();
     }
 
-    void UpdateHealth()
+    public void SetHeartImage(HeartStatus status)
     {
-        // Garante que o valor de health não exceda numOfHearts
-        health = Mathf.Clamp(health, 0, numOfHearts);
-
-        for (int i = 0; i < hearts.Length; i++)
+        switch(status)
         {
-            // Atualiza o sprite baseado na vida
-            hearts[i].sprite = i < health ? fullHearts : emptyHearts;
-
-            // Ativa e desativa corações com base no número máximo de corações
-            hearts[i].enabled = i < numOfHearts;
-        }
-    }
-
-    public void TakeDamage(int amount)
-    {
-        health -= amount;
-        UpdateHealth();
-
-        if (health <= 0)
-        {
-            // Por enquanto vai destruir o objeto quando a quantidade de vida chegar a zero
-            Destroy(gameObject);
+            case HeartStatus.Empty:
+                heartImage.sprite = emptyHeart;
+                break;
+            case HeartStatus.Half:
+                heartImage.sprite = halfHeart;
+                break;
+            case HeartStatus.Full:
+                heartImage.sprite = fullHeart;
+                break;
         }
     }
 
 }
+public enum HeartStatus {
+    Empty = 0,
+    Half = 1,
+    Full = 2 
+}
+ 
+    
+
+
+
+
