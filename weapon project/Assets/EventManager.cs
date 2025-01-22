@@ -57,4 +57,9 @@ public class EventManager : MonoBehaviour
     {
         OnItemPickedUp?.Invoke();
     }
+
+    public void EnemyKilled()
+    {
+        OnEnemyKill?.Invoke();
+    }
 }
