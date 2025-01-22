@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using NUnit.Framework.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -69,8 +70,13 @@ public class GenerateRandomItem : MonoBehaviour
                 items.Remove(items[i]);
         }
 
-        floorItem.item = items[UnityEngine.Random.Range(0, items.Count)];
-        floorItem.ForceStart();
+        PickItem(items[UnityEngine.Random.Range(0, items.Count)]);
 
+    }
+
+    protected virtual void PickItem(Item item)
+    {
+        floorItem.item = item;
+        floorItem.ForceStart();
     }
 }
