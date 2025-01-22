@@ -37,7 +37,7 @@ public class Door : MonoBehaviour
 
     public void ToggleLock(bool open)
     {
-        GetComponentInChildren<Collider2D>().enabled = false;
+        GetComponentInChildren<Collider2D>().enabled = open;
     }
 
     private void ChangeRooms()
