@@ -170,10 +170,14 @@ PrefabInstance:
     - target: {fileID: 5283385417199112362, guid: 064330e680f51d84cb0e32bb56924c31, type: 3}
       propertyPath: item
       value: 
-      objectReference: {fileID: 490735095478297788, guid: 8439a930119efa141bafa9bd730f7530, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 7449217395408643048, guid: 064330e680f51d84cb0e32bb56924c31, type: 3}
       propertyPath: m_Name
       value: Item Pedestal (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7449217395408643048, guid: 064330e680f51d84cb0e32bb56924c31, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -242,10 +246,14 @@ PrefabInstance:
     - target: {fileID: 5283385417199112362, guid: 064330e680f51d84cb0e32bb56924c31, type: 3}
       propertyPath: item
       value: 
-      objectReference: {fileID: 7530939817722902746, guid: d736e32f345bd144684de05ff335e6e5, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 7449217395408643048, guid: 064330e680f51d84cb0e32bb56924c31, type: 3}
       propertyPath: m_Name
       value: Item Pedestal
+      objectReference: {fileID: 0}
+    - target: {fileID: 9108123459455841798, guid: 064330e680f51d84cb0e32bb56924c31, type: 3}
+      propertyPath: times
+      value: 10000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -303,10 +311,14 @@ PrefabInstance:
     - target: {fileID: 5283385417199112362, guid: 064330e680f51d84cb0e32bb56924c31, type: 3}
       propertyPath: item
       value: 
-      objectReference: {fileID: 4450757361245690946, guid: d571beb434883094aa2a147e0c078c92, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 7449217395408643048, guid: 064330e680f51d84cb0e32bb56924c31, type: 3}
       propertyPath: m_Name
       value: Item Pedestal (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7449217395408643048, guid: 064330e680f51d84cb0e32bb56924c31, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -375,10 +387,14 @@ PrefabInstance:
     - target: {fileID: 5283385417199112362, guid: 064330e680f51d84cb0e32bb56924c31, type: 3}
       propertyPath: item
       value: 
-      objectReference: {fileID: 2657433745449443510, guid: 105d45e2c2a73254ea1bb877bc66e5ec, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 7449217395408643048, guid: 064330e680f51d84cb0e32bb56924c31, type: 3}
       propertyPath: m_Name
       value: Item Pedestal (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7449217395408643048, guid: 064330e680f51d84cb0e32bb56924c31, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -760,10 +776,14 @@ PrefabInstance:
     - target: {fileID: 5283385417199112362, guid: 064330e680f51d84cb0e32bb56924c31, type: 3}
       propertyPath: item
       value: 
-      objectReference: {fileID: 2657433745449443510, guid: 105d45e2c2a73254ea1bb877bc66e5ec, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 7449217395408643048, guid: 064330e680f51d84cb0e32bb56924c31, type: 3}
       propertyPath: m_Name
       value: Item Pedestal (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7449217395408643048, guid: 064330e680f51d84cb0e32bb56924c31, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -822,6 +842,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Item Pedestal (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 7449217395408643048, guid: 064330e680f51d84cb0e32bb56924c31, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -878,10 +902,14 @@ PrefabInstance:
     - target: {fileID: 5283385417199112362, guid: 064330e680f51d84cb0e32bb56924c31, type: 3}
       propertyPath: item
       value: 
-      objectReference: {fileID: 3164003262882763226, guid: d470b53d671d8404ab2f06c4f340a520, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 7449217395408643048, guid: 064330e680f51d84cb0e32bb56924c31, type: 3}
       propertyPath: m_Name
       value: Item Pedestal (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7449217395408643048, guid: 064330e680f51d84cb0e32bb56924c31, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

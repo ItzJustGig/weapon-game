@@ -29,7 +29,7 @@ public class PlayerPickUp : MonoBehaviour
 
             if (!cancel)
             {
-                FindAnyObjectByType<EventManager>().PickUpItem();
+                EventManager.Instance.PickUpItem();
 
                 textTitle.text = floorItem.item.name;
                 textDesc.text = floorItem.item.desc;

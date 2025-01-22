@@ -15,7 +15,7 @@ public class PlayerAttackManager : MonoBehaviour
 
             if (atk.delay <= 0)
             {
-                FindAnyObjectByType<EventManager>().BulletFired(atk.Spawn(0, 0, 0));
+                EventManager.Instance.BulletFired(atk.Spawn(0, 0, 0));
                 attackQueue.RemoveAt(i);
             }
         }
