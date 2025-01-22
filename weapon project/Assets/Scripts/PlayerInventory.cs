@@ -29,6 +29,7 @@ public class PlayerInventory : MonoBehaviour
         foreach (ActiveItem item in actives)
         {
             item.Initialize();
+            item.SetOwner(this.gameObject);
         }
 
         foreach (PassiveItem item in passives)
@@ -39,23 +40,29 @@ public class PlayerInventory : MonoBehaviour
 
     private void Update()
     {
+        Vector2 direction = new Vector2();
+
+        // Find the player's position
+        direction.x = Input.GetAxisRaw("Horizontal");
+        direction.y = Input.GetAxisRaw("Vertical");
+
         if (curDropTimer < dropTimer)
         {
             if (Input.GetKeyDown(KeyCode.Alpha1) && (actives.Count >= 1 && actives[0]))
             {
-                actives[0].Active();
+                actives[0].Active(direction);
             }
             if (Input.GetKeyDown(KeyCode.Alpha2) && (actives.Count >= 2 && actives[1]))
             {
-                actives[1].Active();
+                actives[1].Active(direction);
             }
             if (Input.GetKeyDown(KeyCode.Alpha3) && (actives.Count >= 3 && actives[2]))
             {
-                actives[2].Active();
+                actives[2].Active(direction);
             }
             if (Input.GetKeyDown(KeyCode.Alpha4) && (actives.Count >= 4 && actives[3]))
             {
-                actives[3].Active();
+                actives[3].Active(direction);
             }
         }
 

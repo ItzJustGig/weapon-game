@@ -20,7 +20,7 @@ public class SlotMachineItem : ActiveItem
         EventManager.OnItemPickedUp -= PickUpNewItem;*/
     }
 
-    public override void Active()
+    public override void Active(Vector2 direction)
     {
         int result = Random.Range(0, 4 + 1);
 

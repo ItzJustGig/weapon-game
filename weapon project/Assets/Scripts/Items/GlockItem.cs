@@ -8,8 +8,8 @@ public class GlockItem : ActiveItem
     public float damage;
     public GameObject bullet;
 
-    public override void Active()
+    public override void Active(Vector2 direction)
     {
-        FindAnyObjectByType<PlayerAttackManager>().attackQueue.Add(new AttackQueueObject(0f, lifeTime, travelSpeed, damage, bullet));
+        AttackManager.Instance.attackQueue.Add(new AttackQueueObject(0f, lifeTime, travelSpeed, damage, bullet, owner, direction));
     }
 }

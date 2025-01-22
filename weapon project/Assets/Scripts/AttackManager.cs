@@ -2,9 +2,9 @@ using NUnit.Framework;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerAttackManager : MonoBehaviour
+public class AttackManager : MonoBehaviour
 {
-    public static PlayerAttackManager Instance { get; private set; }
+    public static AttackManager Instance { get; private set; }
 
     public List<AttackQueueObject> attackQueue;
 

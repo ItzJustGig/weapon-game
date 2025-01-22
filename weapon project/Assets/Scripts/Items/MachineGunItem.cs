@@ -11,12 +11,11 @@ public class MachineGunItem : ActiveItem
     public float bulletNumber;
     public GameObject bullet;
 
-    public override void Active()
+    public override void Active(Vector2 direction)
     {
         for (int i = 0; i < bulletNumber; i++)
         {
-
-            FindAnyObjectByType<PlayerAttackManager>().attackQueue.Add(new AttackQueueObject(bulletInterval*i, lifeTime, travelSpeed, damage, bullet));
+            AttackManager.Instance.attackQueue.Add(new AttackQueueObject(bulletInterval*i, lifeTime, travelSpeed, damage, bullet, owner, direction));
         }
     }
 }

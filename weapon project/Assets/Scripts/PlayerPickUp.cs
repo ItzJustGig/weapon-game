@@ -38,6 +38,9 @@ public class PlayerPickUp : MonoBehaviour
                 floorItem.item.OnPickUp();
                 floorItem.item.Initialize();
 
+                if (floorItem.item is ActiveItem ac)
+                    ac.SetOwner(this.gameObject.transform.parent.gameObject);
+
                 Destroy(collision.gameObject);
             }
         }
