@@ -53,6 +53,34 @@ MonoBehaviour:
   travelSpeed: 0
   damage: 0
   cardSpinSpeed: 360
+  red:
+  - {fileID: -692935640, guid: d305da42777f7fe418e64178c7990895, type: 3}
+  - {fileID: -1256817540, guid: d305da42777f7fe418e64178c7990895, type: 3}
+  - {fileID: -1672836088, guid: d305da42777f7fe418e64178c7990895, type: 3}
+  - {fileID: 1879265819, guid: d305da42777f7fe418e64178c7990895, type: 3}
+  - {fileID: -627902366, guid: d305da42777f7fe418e64178c7990895, type: 3}
+  - {fileID: 136588102, guid: d305da42777f7fe418e64178c7990895, type: 3}
+  - {fileID: -320199593, guid: d305da42777f7fe418e64178c7990895, type: 3}
+  - {fileID: 241425805, guid: d305da42777f7fe418e64178c7990895, type: 3}
+  - {fileID: 658956854, guid: d305da42777f7fe418e64178c7990895, type: 3}
+  - {fileID: 1352559389, guid: d305da42777f7fe418e64178c7990895, type: 3}
+  - {fileID: 1889720107, guid: d305da42777f7fe418e64178c7990895, type: 3}
+  - {fileID: -1555238529, guid: d305da42777f7fe418e64178c7990895, type: 3}
+  - {fileID: -569155746, guid: d305da42777f7fe418e64178c7990895, type: 3}
+  black:
+  - {fileID: -1654923618, guid: d305da42777f7fe418e64178c7990895, type: 3}
+  - {fileID: -1688813995, guid: d305da42777f7fe418e64178c7990895, type: 3}
+  - {fileID: -669893881, guid: d305da42777f7fe418e64178c7990895, type: 3}
+  - {fileID: 2095462868, guid: d305da42777f7fe418e64178c7990895, type: 3}
+  - {fileID: -710502442, guid: d305da42777f7fe418e64178c7990895, type: 3}
+  - {fileID: -1111490752, guid: d305da42777f7fe418e64178c7990895, type: 3}
+  - {fileID: 1888693998, guid: d305da42777f7fe418e64178c7990895, type: 3}
+  - {fileID: 75089853, guid: d305da42777f7fe418e64178c7990895, type: 3}
+  - {fileID: -1081406349, guid: d305da42777f7fe418e64178c7990895, type: 3}
+  - {fileID: 1364511817, guid: d305da42777f7fe418e64178c7990895, type: 3}
+  - {fileID: 913177043, guid: d305da42777f7fe418e64178c7990895, type: 3}
+  - {fileID: 1524726987, guid: d305da42777f7fe418e64178c7990895, type: 3}
+  - {fileID: 2140748856, guid: d305da42777f7fe418e64178c7990895, type: 3}
 --- !u!1 &6397133500280457939
 GameObject:
   m_ObjectHideFlags: 0
@@ -129,12 +157,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1995651815, guid: d305da42777f7fe418e64178c7990895, type: 3}
+  m_Sprite: {fileID: 1888693998, guid: d305da42777f7fe418e64178c7990895, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 1.44}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
