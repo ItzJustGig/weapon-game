@@ -116,10 +116,10 @@ TextureImporter:
       name: CuteCards_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 436
-        width: 92
-        height: 136
+        x: 0
+        y: 144
+        width: 100
+        height: 144
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -138,10 +138,10 @@ TextureImporter:
       name: CuteCards_1
       rect:
         serializedVersion: 2
-        x: 104
-        y: 436
-        width: 92
-        height: 136
+        x: 100
+        y: 144
+        width: 100
+        height: 144
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,10 +160,10 @@ TextureImporter:
       name: CuteCards_2
       rect:
         serializedVersion: 2
-        x: 204
-        y: 436
-        width: 92
-        height: 136
+        x: 200
+        y: 144
+        width: 100
+        height: 144
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,10 +182,10 @@ TextureImporter:
       name: CuteCards_3
       rect:
         serializedVersion: 2
-        x: 304
-        y: 436
-        width: 92
-        height: 136
+        x: 300
+        y: 144
+        width: 100
+        height: 144
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -204,10 +204,10 @@ TextureImporter:
       name: CuteCards_4
       rect:
         serializedVersion: 2
-        x: 404
-        y: 436
-        width: 92
-        height: 136
+        x: 400
+        y: 144
+        width: 100
+        height: 144
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -226,10 +226,10 @@ TextureImporter:
       name: CuteCards_5
       rect:
         serializedVersion: 2
-        x: 504
-        y: 436
-        width: 92
-        height: 136
+        x: 500
+        y: 144
+        width: 100
+        height: 144
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -248,10 +248,10 @@ TextureImporter:
       name: CuteCards_6
       rect:
         serializedVersion: 2
-        x: 604
-        y: 436
-        width: 92
-        height: 136
+        x: 600
+        y: 144
+        width: 100
+        height: 144
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -270,10 +270,10 @@ TextureImporter:
       name: CuteCards_7
       rect:
         serializedVersion: 2
-        x: 704
-        y: 436
-        width: 92
-        height: 136
+        x: 700
+        y: 144
+        width: 100
+        height: 144
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -292,10 +292,10 @@ TextureImporter:
       name: CuteCards_8
       rect:
         serializedVersion: 2
-        x: 804
-        y: 436
-        width: 92
-        height: 136
+        x: 800
+        y: 144
+        width: 100
+        height: 144
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -314,10 +314,10 @@ TextureImporter:
       name: CuteCards_9
       rect:
         serializedVersion: 2
-        x: 904
-        y: 436
-        width: 92
-        height: 136
+        x: 900
+        y: 144
+        width: 100
+        height: 144
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -336,10 +336,10 @@ TextureImporter:
       name: CuteCards_10
       rect:
         serializedVersion: 2
-        x: 1004
-        y: 436
-        width: 92
-        height: 136
+        x: 1000
+        y: 144
+        width: 100
+        height: 144
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -358,10 +358,10 @@ TextureImporter:
       name: CuteCards_11
       rect:
         serializedVersion: 2
-        x: 1104
-        y: 436
-        width: 92
-        height: 136
+        x: 1100
+        y: 144
+        width: 100
+        height: 144
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -380,10 +380,10 @@ TextureImporter:
       name: CuteCards_12
       rect:
         serializedVersion: 2
-        x: 1204
-        y: 436
-        width: 92
-        height: 136
+        x: 1200
+        y: 144
+        width: 100
+        height: 144
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -402,10 +402,10 @@ TextureImporter:
       name: CuteCards_13
       rect:
         serializedVersion: 2
-        x: 4
-        y: 292
-        width: 92
-        height: 136
+        x: 0
+        y: 0
+        width: 100
+        height: 144
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -424,10 +424,10 @@ TextureImporter:
       name: CuteCards_14
       rect:
         serializedVersion: 2
-        x: 104
-        y: 292
-        width: 92
-        height: 136
+        x: 100
+        y: 0
+        width: 100
+        height: 144
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -446,10 +446,10 @@ TextureImporter:
       name: CuteCards_15
       rect:
         serializedVersion: 2
-        x: 204
-        y: 292
-        width: 92
-        height: 136
+        x: 200
+        y: 0
+        width: 100
+        height: 144
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -468,10 +468,10 @@ TextureImporter:
       name: CuteCards_16
       rect:
         serializedVersion: 2
-        x: 304
-        y: 292
-        width: 92
-        height: 136
+        x: 300
+        y: 0
+        width: 100
+        height: 144
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -490,10 +490,10 @@ TextureImporter:
       name: CuteCards_17
       rect:
         serializedVersion: 2
-        x: 404
-        y: 292
-        width: 92
-        height: 136
+        x: 400
+        y: 0
+        width: 100
+        height: 144
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -512,10 +512,10 @@ TextureImporter:
       name: CuteCards_18
       rect:
         serializedVersion: 2
-        x: 504
-        y: 292
-        width: 92
-        height: 136
+        x: 500
+        y: 0
+        width: 100
+        height: 144
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -534,10 +534,10 @@ TextureImporter:
       name: CuteCards_19
       rect:
         serializedVersion: 2
-        x: 604
-        y: 292
-        width: 92
-        height: 136
+        x: 600
+        y: 0
+        width: 100
+        height: 144
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -556,10 +556,10 @@ TextureImporter:
       name: CuteCards_20
       rect:
         serializedVersion: 2
-        x: 704
-        y: 292
-        width: 92
-        height: 136
+        x: 700
+        y: 0
+        width: 100
+        height: 144
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -578,10 +578,10 @@ TextureImporter:
       name: CuteCards_21
       rect:
         serializedVersion: 2
-        x: 804
-        y: 292
-        width: 92
-        height: 136
+        x: 800
+        y: 0
+        width: 100
+        height: 144
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -600,10 +600,10 @@ TextureImporter:
       name: CuteCards_22
       rect:
         serializedVersion: 2
-        x: 904
-        y: 292
-        width: 92
-        height: 136
+        x: 900
+        y: 0
+        width: 100
+        height: 144
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -622,10 +622,10 @@ TextureImporter:
       name: CuteCards_23
       rect:
         serializedVersion: 2
-        x: 1004
-        y: 292
-        width: 92
-        height: 136
+        x: 1000
+        y: 0
+        width: 100
+        height: 144
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -644,10 +644,10 @@ TextureImporter:
       name: CuteCards_24
       rect:
         serializedVersion: 2
-        x: 1104
-        y: 292
-        width: 92
-        height: 136
+        x: 1100
+        y: 0
+        width: 100
+        height: 144
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -666,10 +666,10 @@ TextureImporter:
       name: CuteCards_25
       rect:
         serializedVersion: 2
-        x: 1204
-        y: 292
-        width: 92
-        height: 136
+        x: 1200
+        y: 0
+        width: 100
+        height: 144
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -680,578 +680,6 @@ TextureImporter:
       bones: []
       spriteID: ab036866da12a764bbc1bac361cb52d1
       internalID: -569155746
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CuteCards_26
-      rect:
-        serializedVersion: 2
-        x: 4
-        y: 148
-        width: 92
-        height: 136
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e5f138866ac9de44abe84f61667ca351
-      internalID: 1304609524
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CuteCards_27
-      rect:
-        serializedVersion: 2
-        x: 104
-        y: 148
-        width: 92
-        height: 136
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0af1143e280078b4a921feed5f0d46e6
-      internalID: -1476730667
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CuteCards_28
-      rect:
-        serializedVersion: 2
-        x: 204
-        y: 148
-        width: 92
-        height: 136
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f9ccef58c83567b42a89527e1947a9f1
-      internalID: -69269524
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CuteCards_29
-      rect:
-        serializedVersion: 2
-        x: 304
-        y: 148
-        width: 92
-        height: 136
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 52cc087393b37ea44a32baff89e40525
-      internalID: -1480499020
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CuteCards_30
-      rect:
-        serializedVersion: 2
-        x: 404
-        y: 148
-        width: 92
-        height: 136
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5c565fccb7a787b48b1c01b99b7e9a3f
-      internalID: 253015611
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CuteCards_31
-      rect:
-        serializedVersion: 2
-        x: 504
-        y: 148
-        width: 92
-        height: 136
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0aa9aef708f7c724baff8d80858c7eb5
-      internalID: 102759895
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CuteCards_32
-      rect:
-        serializedVersion: 2
-        x: 604
-        y: 148
-        width: 92
-        height: 136
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c91043757733ce1429f2fa6834a7a83e
-      internalID: -851230294
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CuteCards_33
-      rect:
-        serializedVersion: 2
-        x: 704
-        y: 148
-        width: 92
-        height: 136
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b8800c0d41a8c864e8042950962bcbad
-      internalID: -1258388620
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CuteCards_34
-      rect:
-        serializedVersion: 2
-        x: 804
-        y: 148
-        width: 92
-        height: 136
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0172c08d51086884bba83b12c5e6f5c1
-      internalID: -713065042
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CuteCards_35
-      rect:
-        serializedVersion: 2
-        x: 904
-        y: 148
-        width: 92
-        height: 136
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2c45787eb3cb7214d8ef70a0c2a78715
-      internalID: 443963596
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CuteCards_36
-      rect:
-        serializedVersion: 2
-        x: 1004
-        y: 148
-        width: 92
-        height: 136
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fc0d6e3f8dded974e91d26a61783007b
-      internalID: 221515772
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CuteCards_37
-      rect:
-        serializedVersion: 2
-        x: 1104
-        y: 148
-        width: 92
-        height: 136
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d240b84979b9e2a4dbf38f9fdec19cf7
-      internalID: -646545838
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CuteCards_38
-      rect:
-        serializedVersion: 2
-        x: 1204
-        y: 148
-        width: 92
-        height: 136
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e0c6f4cef9ad50a48a18f262092fc7d4
-      internalID: -481078519
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CuteCards_39
-      rect:
-        serializedVersion: 2
-        x: 4
-        y: 4
-        width: 92
-        height: 136
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c022853d6a0563a4981149098df5d1b9
-      internalID: -1215406745
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CuteCards_40
-      rect:
-        serializedVersion: 2
-        x: 104
-        y: 4
-        width: 92
-        height: 136
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8f6442e46ba595741baebe2cfc7bbfa8
-      internalID: -446536460
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CuteCards_41
-      rect:
-        serializedVersion: 2
-        x: 204
-        y: 4
-        width: 92
-        height: 136
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 28c3bfbd92c836840ba3b4acfba597e9
-      internalID: -1617197372
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CuteCards_42
-      rect:
-        serializedVersion: 2
-        x: 304
-        y: 4
-        width: 92
-        height: 136
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 678f46cb02695044282934b6f380f405
-      internalID: -59113013
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CuteCards_43
-      rect:
-        serializedVersion: 2
-        x: 404
-        y: 4
-        width: 92
-        height: 136
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 47462ece4373f15489dac2b5aa8e91bf
-      internalID: -958318654
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CuteCards_44
-      rect:
-        serializedVersion: 2
-        x: 504
-        y: 4
-        width: 92
-        height: 136
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 71f2a25cae4aec944a8b6f5b4f820646
-      internalID: 1463662625
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CuteCards_45
-      rect:
-        serializedVersion: 2
-        x: 604
-        y: 4
-        width: 92
-        height: 136
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 82cf42075876fb6439713fb9c6f758e7
-      internalID: 2020983454
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CuteCards_46
-      rect:
-        serializedVersion: 2
-        x: 704
-        y: 4
-        width: 92
-        height: 136
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 48cb96c3eb1c3e4469c0e52ad01079e9
-      internalID: 375559689
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CuteCards_47
-      rect:
-        serializedVersion: 2
-        x: 804
-        y: 4
-        width: 92
-        height: 136
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6d40cc0262917764fa99ae2788ff9650
-      internalID: -1646043197
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CuteCards_48
-      rect:
-        serializedVersion: 2
-        x: 904
-        y: 4
-        width: 92
-        height: 136
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f5ae7b00bc08a8b42a73af2e90203b51
-      internalID: -268069541
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CuteCards_49
-      rect:
-        serializedVersion: 2
-        x: 1004
-        y: 4
-        width: 92
-        height: 136
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 354e9e39313d8d44db47a5531d3eadc8
-      internalID: 256905604
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CuteCards_50
-      rect:
-        serializedVersion: 2
-        x: 1104
-        y: 4
-        width: 92
-        height: 136
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4b9043159aa4f214c9cb3e2b3c88a830
-      internalID: -1909350670
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CuteCards_51
-      rect:
-        serializedVersion: 2
-        x: 1204
-        y: 4
-        width: 92
-        height: 136
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3e8bc3ba4318818418fa128e31a944ae
-      internalID: -153789043
       vertices: []
       indices: 
       edges: []
@@ -1289,35 +717,9 @@ TextureImporter:
       CuteCards_23: 1889720107
       CuteCards_24: -1555238529
       CuteCards_25: -569155746
-      CuteCards_26: 1304609524
-      CuteCards_27: -1476730667
-      CuteCards_28: -69269524
-      CuteCards_29: -1480499020
       CuteCards_3: 2095462868
-      CuteCards_30: 253015611
-      CuteCards_31: 102759895
-      CuteCards_32: -851230294
-      CuteCards_33: -1258388620
-      CuteCards_34: -713065042
-      CuteCards_35: 443963596
-      CuteCards_36: 221515772
-      CuteCards_37: -646545838
-      CuteCards_38: -481078519
-      CuteCards_39: -1215406745
       CuteCards_4: -710502442
-      CuteCards_40: -446536460
-      CuteCards_41: -1617197372
-      CuteCards_42: -59113013
-      CuteCards_43: -958318654
-      CuteCards_44: 1463662625
-      CuteCards_45: 2020983454
-      CuteCards_46: 375559689
-      CuteCards_47: -1646043197
-      CuteCards_48: -268069541
-      CuteCards_49: 256905604
       CuteCards_5: -1111490752
-      CuteCards_50: -1909350670
-      CuteCards_51: -153789043
       CuteCards_6: 1888693998
       CuteCards_7: 75089853
       CuteCards_8: -1081406349
