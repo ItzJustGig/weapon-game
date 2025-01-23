@@ -17,10 +17,14 @@ public class PlayerPickUp : MonoBehaviour
             FloorItem floorItem = collision.GetComponent<FloorItem>();
 
             if (floorItem.item is PassiveItem pas)
-                this.gameObject.GetComponentInParent<PlayerInventory>().passives.Add(pas);
+            {
+                PassiveItem temp = pas;
+                this.gameObject.GetComponentInParent<PlayerInventory>().passives.Add(temp);
+            }
             else if (floorItem.item is ActiveItem act && this.gameObject.GetComponentInParent<PlayerInventory>().actives.Count < 4)
             {
-                this.gameObject.GetComponentInParent<PlayerInventory>().actives.Add(act);
+                ActiveItem temp = act;
+                this.gameObject.GetComponentInParent<PlayerInventory>().actives.Add(temp);
             }
             else if (this.gameObject.GetComponentInParent<PlayerInventory>().actives.Count >= 4)
             {

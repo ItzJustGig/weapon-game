@@ -6,6 +6,7 @@ public abstract class Item : MonoBehaviour
     public enum Rarity { COMMON, UNCOMMON, RARE, EPIC, LEGENDARY }
     public string name;
     public string desc;
+    public bool isEnemyCompatible;
     public Sprite icon;
     public Rarity rarity;
 

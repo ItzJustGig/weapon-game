@@ -2,6 +2,7 @@ using NUnit.Framework;
 using System.Collections.Generic;
 using UnityEditor.Rendering;
 using UnityEngine;
+using static UnityEditor.ShaderData;
 
 public class PlayerInventory : MonoBehaviour
 {
@@ -11,10 +12,11 @@ public class PlayerInventory : MonoBehaviour
     public List<ActiveItem> actives;
     public List<PassiveItem> passives;
 
+    List<ActiveItem> act;
+    List<PassiveItem> pass;
 
     [Header("Stats")]
     public Stats bonusStats;
-
 
     [Header("Others")]
     [SerializeField]
@@ -26,13 +28,23 @@ public class PlayerInventory : MonoBehaviour
     private void Start()
     {
         //Ititialize the player's inventory
-        foreach (ActiveItem item in actives)
+        foreach (ActiveItem item in actives.ToArray())
+        {
+            act.Add(item);
+        }
+
+        foreach (ActiveItem item in act)
         {
             item.Initialize();
             item.SetOwner(this.gameObject);
         }
 
-        foreach (PassiveItem item in passives)
+        foreach (PassiveItem item in passives.ToArray())
+        {
+            pass.Add(item);
+        }
+
+        foreach (PassiveItem item in pass)
         {
             item.Initialize();
         }
