@@ -52,7 +52,7 @@ MonoBehaviour:
   charging: 0
   cooldown: 0
   lifeTime: 3
-  travelSpeed: 8
+  travelSpeed: 5
   damage: 3
   adjacentCardsAngleOffset: 15
   card: {fileID: 5656741699765515524, guid: cb8052e1c8400074b84e2faf2b7ec87f, type: 3}
