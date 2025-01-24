@@ -20,7 +20,9 @@ public class ElectroBullet : PassiveItem
 
     private void OnBulletFired(GameObject proj)
     {
-        if (proj.GetComponent<Projectile>() != null && proj.GetComponent<Projectile>().type is Projectile.DamageType.BULLET)
+        if (proj.GetComponent<Projectile>() != null 
+            && proj.GetComponent<Projectile>().type is Projectile.DamageType.BULLET 
+            && proj.GetComponent<Projectile>().owner == owner)
         {
             proj.GetComponentInChildren<SpriteRenderer>().color = color;
         }

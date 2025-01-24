@@ -26,8 +26,10 @@ public class GenerateRandomItem : MonoBehaviour
 
     public void Pick()
     {
-        // Generate a random number between 0 and 100
+        // Generate a random number between 0 and 100, this will determite the rarity of the item
         float randomValue = UnityEngine.Random.Range(0f, 1f);
+
+        //probability rates
         float[] probabilities = 
         {
             .55f,
@@ -37,6 +39,7 @@ public class GenerateRandomItem : MonoBehaviour
             .01f
         };
 
+        //based on the comulative values of the probabilities, it will determine which rarity was picked
         float val = 0;
         Item.Rarity pick = Item.Rarity.COMMON;
         for (int i = 0; i < probabilities.Count(); i++)
@@ -61,15 +64,18 @@ public class GenerateRandomItem : MonoBehaviour
             }
         }
 
+        //unifies the passive and active items lists
         List<Item> items = new List<Item>();
         items = activeItemsGO.GetComponent<ItemList>().items.Union(passiveItemsGO.GetComponent<ItemList>().items).ToList();
 
+        //goes through every item, and removes the ones that are not of the picked rarity
         for (int i = items.Count - 1; i >= 0; i--)
         {
             if (items[i].rarity != pick)
                 items.Remove(items[i]);
         }
 
+        //generates a random item, from those that were left out, and spawns it
         PickItem(items[UnityEngine.Random.Range(0, items.Count)]);
 
     }

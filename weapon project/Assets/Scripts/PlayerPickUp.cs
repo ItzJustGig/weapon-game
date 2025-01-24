@@ -39,11 +39,11 @@ public class PlayerPickUp : MonoBehaviour
                 textDesc.text = floorItem.item.desc;
                 textAnimator.SetTrigger("pickup");
 
-                floorItem.item.OnPickUp();
-                floorItem.item.Initialize();
-
-                if (floorItem.item is ActiveItem ac)
-                    ac.SetOwner(this.gameObject.transform.parent.gameObject);
+                Item item = Instantiate(floorItem.item);
+                item.gameObject.SetActive(false);
+                item.OnPickUp();
+                item.Initialize();
+                item.SetOwner(this.gameObject.transform.parent.gameObject);
 
                 Destroy(collision.gameObject);
             }

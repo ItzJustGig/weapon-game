@@ -9,6 +9,12 @@ public abstract class Item : MonoBehaviour
     public bool isEnemyCompatible;
     public Sprite icon;
     public Rarity rarity;
+    protected GameObject owner;
+
+    public void SetOwner(GameObject owner)
+    {
+        this.owner = owner;
+    }
 
     public abstract void Initialize(); // Called when the item is equipped or activated
     public abstract void OnPickUp();

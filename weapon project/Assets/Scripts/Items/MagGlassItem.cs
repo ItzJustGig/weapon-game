@@ -20,7 +20,9 @@ public class MagGlassItem : PassiveItem
 
     private void OnBulletFired(GameObject proj)
     {
-        if (proj.GetComponent<Projectile>() != null && proj.GetComponent<Projectile>().type is Projectile.DamageType.ELEMENTAL)
+        if (proj.GetComponent<Projectile>() != null 
+            && proj.GetComponent<Projectile>().type is Projectile.DamageType.ELEMENTAL 
+            && proj.GetComponent<Projectile>().owner == owner)
         {
             Vector3 temp = proj.transform.localScale;
 

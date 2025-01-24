@@ -12,8 +12,6 @@ public class PlayerInventory : MonoBehaviour
     public List<ActiveItem> actives;
     public List<PassiveItem> passives;
 
-    List<ActiveItem> act;
-    List<PassiveItem> pass;
 
     [Header("Stats")]
     public Stats bonusStats;
@@ -28,25 +26,40 @@ public class PlayerInventory : MonoBehaviour
     private void Start()
     {
         //Ititialize the player's inventory
-        foreach (ActiveItem item in actives.ToArray())
+
+        //creates an instance of the items that it started with, and saves the instance. then rewrites the start list with
+        //the list of instances and initializes the items
+        List<ActiveItem> act = new List<ActiveItem>();
+        foreach (ActiveItem item in actives)
         {
-            act.Add(item);
+            ActiveItem m = Instantiate(item);
+            act.Add(m);
         }
 
-        foreach (ActiveItem item in act)
+        actives = act;
+
+        foreach (ActiveItem item in actives)
         {
+            item.gameObject.SetActive(false);
             item.Initialize();
             item.SetOwner(this.gameObject);
         }
 
-        foreach (PassiveItem item in passives.ToArray())
+        List<PassiveItem> pass = new List<PassiveItem>();
+
+        foreach (PassiveItem item in passives)
         {
-            pass.Add(item);
+            PassiveItem m = Instantiate(item);
+            pass.Add(m);
         }
 
-        foreach (PassiveItem item in pass)
+        passives = pass;
+
+        foreach (PassiveItem item in passives)
         {
+            item.gameObject.SetActive(false);
             item.Initialize();
+            item.SetOwner(this.gameObject);
         }
     }
 
@@ -54,10 +67,11 @@ public class PlayerInventory : MonoBehaviour
     {
         Vector2 direction = new Vector2();
 
-        // Find the player's position
+        //get where player is aiming
         direction.x = Input.GetAxisRaw("Horizontal");
         direction.y = Input.GetAxisRaw("Vertical");
 
+        //use item actives if its not trying to drop
         if (curDropTimer < dropTimer)
         {
             if (Input.GetKeyDown(KeyCode.Alpha1) && (actives.Count >= 1 && actives[0]))
@@ -88,6 +102,7 @@ public class PlayerInventory : MonoBehaviour
         {
             Debug.Log("READY TO DROP");
 
+            //waits to get which item to drop, if its escape cancels
             int tmp = -1;
             if (Input.GetKeyDown(KeyCode.Alpha1) && (actives.Count >= 1 && actives[0]))
             {
@@ -110,9 +125,17 @@ public class PlayerInventory : MonoBehaviour
             if (tmp != -1) {
                 Vector3 temp = this.transform.position;
                 temp.y += 1.1f;
+
+                //creates a item pedestal with the dropped item data
                 GameObject drop = Instantiate(dropItem, temp, this.transform.rotation);
                 drop.GetComponent<FloorItem>().item = actives[tmp];
+
+                //saves the instance of the dropped item, then destroys it
+                ActiveItem toDiscard = actives[tmp];
                 actives.Remove(actives[tmp]);
+                Destroy(toDiscard.gameObject);
+
+                //forces the dropped item to show its sprite & resets the drop timer
                 drop.GetComponent<FloorItem>().ForceStart();
                 curDropTimer = 0;
             }
