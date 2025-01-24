@@ -85,4 +85,9 @@ public class GenerateRandomItem : MonoBehaviour
         floorItem.item = item;
         floorItem.ForceStart();
     }
+
+    public List<Item> GetItems()
+    {
+        return activeItemsGO.GetComponent<ItemList>().items.Union(passiveItemsGO.GetComponent<ItemList>().items).ToList();
+    }
 }

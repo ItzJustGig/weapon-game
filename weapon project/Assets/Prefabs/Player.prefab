@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 8733204215407376527}
   - component: {fileID: 8977505414208534736}
   - component: {fileID: 1351960482529819314}
-  - component: {fileID: 2259948851583714690}
   - component: {fileID: 3926257930298534174}
   - component: {fileID: 7510051878739314676}
   - component: {fileID: 2114723746362790247}
@@ -125,8 +124,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gold: 0
   keys: 0
-  actives:
-  - {fileID: -3138968594072106447, guid: 0ba07df389423694991d5dc4d392a3e2, type: 3}
+  actives: []
   passives: []
   bonusStats:
     hp: 0
@@ -137,19 +135,6 @@ MonoBehaviour:
     projectileLifeTime: 0
     projectileTravelSpeed: 0
   dropItem: {fileID: 7449217395408643048, guid: 064330e680f51d84cb0e32bb56924c31, type: 3}
---- !u!114 &2259948851583714690
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 270954108345985039}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d225070ce73c7b409491866c672edf7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackQueue: []
 --- !u!50 &3926257930298534174
 Rigidbody2D:
   serializedVersion: 5

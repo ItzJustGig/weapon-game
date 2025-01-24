@@ -16,17 +16,8 @@ public class PlayerPickUp : MonoBehaviour
             bool cancel = false;
             FloorItem floorItem = collision.GetComponent<FloorItem>();
 
-            if (floorItem.item is PassiveItem pas)
-            {
-                PassiveItem temp = pas;
-                this.gameObject.GetComponentInParent<PlayerInventory>().passives.Add(temp);
-            }
-            else if (floorItem.item is ActiveItem act && this.gameObject.GetComponentInParent<PlayerInventory>().actives.Count < 4)
-            {
-                ActiveItem temp = act;
-                this.gameObject.GetComponentInParent<PlayerInventory>().actives.Add(temp);
-            }
-            else if (this.gameObject.GetComponentInParent<PlayerInventory>().actives.Count >= 4)
+            
+            if (this.gameObject.GetComponentInParent<PlayerInventory>().actives.Count >= 4 && floorItem.item is ActiveItem)
             {
                  cancel = true;
             }
@@ -44,6 +35,15 @@ public class PlayerPickUp : MonoBehaviour
                 item.OnPickUp();
                 item.Initialize();
                 item.SetOwner(this.gameObject.transform.parent.gameObject);
+
+                if (item is PassiveItem pas)
+                {
+                    this.gameObject.GetComponentInParent<PlayerInventory>().passives.Add(pas);
+                }
+                else if (item is ActiveItem act)
+                {
+                    this.gameObject.GetComponentInParent<PlayerInventory>().actives.Add(act);
+                }
 
                 Destroy(collision.gameObject);
             }

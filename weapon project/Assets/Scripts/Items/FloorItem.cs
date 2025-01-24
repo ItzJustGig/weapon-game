@@ -18,4 +18,16 @@ public class FloorItem : MonoBehaviour
         if (item != null)
             itemIcon.sprite = item.icon;
     }
+
+    public void ReplaceItem(Item item)
+    {
+        foreach (Item it in this.gameObject.GetComponent<GenerateRandomItem>().GetItems())
+        {
+            if (item.name == it.name)
+            {
+                this.item = it;
+                ForceStart();
+            }
+        }
+    }
 }

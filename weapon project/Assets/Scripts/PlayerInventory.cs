@@ -128,15 +128,14 @@ public class PlayerInventory : MonoBehaviour
 
                 //creates a item pedestal with the dropped item data
                 GameObject drop = Instantiate(dropItem, temp, this.transform.rotation);
-                drop.GetComponent<FloorItem>().item = actives[tmp];
+                drop.GetComponent<FloorItem>().ReplaceItem(actives[tmp]);
 
                 //saves the instance of the dropped item, then destroys it
                 ActiveItem toDiscard = actives[tmp];
                 actives.Remove(actives[tmp]);
                 Destroy(toDiscard.gameObject);
 
-                //forces the dropped item to show its sprite & resets the drop timer
-                drop.GetComponent<FloorItem>().ForceStart();
+                //resets the drop timer
                 curDropTimer = 0;
             }
         }
