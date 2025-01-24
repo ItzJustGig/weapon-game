@@ -13,8 +13,18 @@ public class GenerateRandomItem : MonoBehaviour
     [SerializeField]
     private GameObject passiveItemsGO;
 
+    //probability rates
+    public float[] probabilities =
+    {
+        .55f,
+        .26f,
+        .12f,
+        .06f,
+        .01f
+    };
+
     [SerializeField]
-    private FloorItem floorItem;
+    protected FloorItem floorItem;
 
     private void Start()
     {
@@ -24,20 +34,10 @@ public class GenerateRandomItem : MonoBehaviour
         }
     }
 
-    public void Pick()
+    public virtual void Pick()
     {
         // Generate a random number between 0 and 100, this will determite the rarity of the item
         float randomValue = UnityEngine.Random.Range(0f, 1f);
-
-        //probability rates
-        float[] probabilities = 
-        {
-            .55f,
-            .26f,
-            .12f,
-            .06f,
-            .01f
-        };
 
         //based on the comulative values of the probabilities, it will determine which rarity was picked
         float val = 0;
