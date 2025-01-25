@@ -12,7 +12,6 @@ public class AttackQueueObject
     public GameObject projectile;
     public GameObject owner;
     public Vector2 direction;
-    public Projectile.Target target;
 
     public AttackQueueObject(float delay, float lifeTime, float travelSpeed, float damage, GameObject projectile, GameObject owner, Vector2 direction)
     {
@@ -29,7 +28,7 @@ public class AttackQueueObject
     {
         // Instantiate the bullet at the player's position with no rotation
         GameObject obj = GameObject.Instantiate(projectile, owner.transform.position, Quaternion.identity);
-        obj.GetComponent<Projectile>().Setup(owner, new Vector3(direction.x, direction.y, 0), lifeTime+bonusLifeTime, travelSpeed+bonusTravelSpeed, damage+bonusDamage, target);
+        obj.GetComponent<Projectile>().Setup(owner, new Vector3(direction.x, direction.y, 0), lifeTime+bonusLifeTime, travelSpeed+bonusTravelSpeed, damage+bonusDamage);
         return obj;
     }
 }

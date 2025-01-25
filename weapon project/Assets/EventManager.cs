@@ -30,6 +30,7 @@ public class EventManager : MonoBehaviour
 
     public static event Action OnItemPickedUp;
     public static event Action<GameObject> OnBulletFired;
+    public static event Action<GameObject, GameObject> OnBulletHitEnemy;
     public static event Action OnEnterNewRoom;
     public static event Action OnExitRoom;
     public static event Action OnBossKill;
@@ -52,6 +53,12 @@ public class EventManager : MonoBehaviour
     {
         if (proj != null)
             OnBulletFired?.Invoke(proj);
+    }
+
+    public void BulletHitEnemy(GameObject target, GameObject proj)
+    {
+        if (target != null)
+            OnBulletHitEnemy?.Invoke(target, proj);
     }
     
     public void PickUpItem()

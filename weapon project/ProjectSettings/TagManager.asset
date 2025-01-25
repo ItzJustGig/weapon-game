@@ -8,6 +8,8 @@ TagManager:
   - ShopItem
   - Door
   - Minimap
+  - Enemy
+  - Projectile
   layers:
   - Default
   - TransparentFX

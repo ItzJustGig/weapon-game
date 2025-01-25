@@ -20,28 +20,32 @@ public class EnemyInventory : MonoBehaviour
 
     private void Start()
     {
-        int activeItems = Random.Range(1, 4+1);
-        int passiveItems = Random.Range(0, 2+1);
-
-        for (int i = 0; i < activeItems; i++)
+        if (generateInventory)
         {
-            Item it = activeItemsGO.GetComponent<ItemList>().items[Random.Range(0, activeItemsGO.GetComponent<ItemList>().items.Count)];
+            int activeItems = Random.Range(1, 4 + 1);
+            int passiveItems = Random.Range(0, 2 + 1);
 
-            if (it.isEnemyCompatible)
-                actives.Add(it as ActiveItem);
-            else
-                i--;
+            for (int i = 0; i < activeItems; i++)
+            {
+                Item it = activeItemsGO.GetComponent<ItemList>().items[Random.Range(0, activeItemsGO.GetComponent<ItemList>().items.Count)];
+
+                if (it.isEnemyCompatible)
+                    actives.Add(it as ActiveItem);
+                else
+                    i--;
+            }
+
+            for (int i = 0; i < passiveItems; i++)
+            {
+                Item it = passiveItemsGO.GetComponent<ItemList>().items[Random.Range(0, passiveItemsGO.GetComponent<ItemList>().items.Count)];
+
+                if (it.isEnemyCompatible)
+                    passives.Add(it as PassiveItem);
+                else
+                    i--;
+            }
         }
-
-        for (int i = 0; i < passiveItems; i++)
-        {
-            Item it = passiveItemsGO.GetComponent<ItemList>().items[Random.Range(0, passiveItemsGO.GetComponent<ItemList>().items.Count)];
-
-            if (it.isEnemyCompatible)
-                passives.Add(it as PassiveItem);
-            else
-                i--;
-        }
+        
         //Ititialize the enemy's inventory
 
         //creates an instance of the items that it started with, and saves the instance. then rewrites the start list with

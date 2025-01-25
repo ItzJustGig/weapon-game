@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 5312800173083037666}
   - component: {fileID: 3506610304328956233}
   - component: {fileID: 8247560549631048002}
+  - component: {fileID: 6483131823145865806}
   m_Layer: 0
   m_Name: Test Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -125,7 +126,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
+  m_Radius: 0.57768047
 --- !u!114 &3506610304328956233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,3 +157,30 @@ MonoBehaviour:
   passiveItemsGO: {fileID: 8377077957225571060, guid: b13c2c5bfad14ca45abda37797a90941, type: 3}
   generateInventory: 1
   attackInterval: 0
+--- !u!50 &6483131823145865806
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6266972964317126420}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
