@@ -75,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -164,7 +164,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8018868, g: 0.8018868, b: 0.8018868, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -284,4 +284,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activeItemsGO: {fileID: 8377077957225571060, guid: 5b7569e7f1f19ad4c973ed4ff7cbf431, type: 3}
   passiveItemsGO: {fileID: 8377077957225571060, guid: b13c2c5bfad14ca45abda37797a90941, type: 3}
+  probabilities:
+  - 0.55
+  - 0.26
+  - 0.12
+  - 0.06
+  - 0.01
   floorItem: {fileID: 5283385417199112362}
