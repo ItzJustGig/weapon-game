@@ -50,7 +50,8 @@ public class EventManager : MonoBehaviour
 
     public void BulletFired(GameObject proj)
     {
-        OnBulletFired?.Invoke(proj);
+        if (proj != null)
+            OnBulletFired?.Invoke(proj);
     }
     
     public void PickUpItem()

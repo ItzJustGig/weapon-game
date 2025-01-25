@@ -150,3 +150,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b204e69ac397e1d45a11e88ba0ca07be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  actives: []
+  passives: []
+  activeItemsGO: {fileID: 8377077957225571060, guid: 5b7569e7f1f19ad4c973ed4ff7cbf431, type: 3}
+  passiveItemsGO: {fileID: 8377077957225571060, guid: b13c2c5bfad14ca45abda37797a90941, type: 3}
+  generateInventory: 1
+  attackInterval: 0

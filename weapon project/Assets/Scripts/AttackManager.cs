@@ -28,9 +28,15 @@ public class AttackManager : MonoBehaviour
             AttackQueueObject atk = attackQueue[i];
             atk.delay -= Time.deltaTime;
 
+            if (atk.owner == null) {
+                attackQueue.RemoveAt(i);
+                break;
+            }
+
             if (atk.delay <= 0)
             {
-                EventManager.Instance.BulletFired(atk.Spawn(0, 0, 0));
+                if (atk.owner != null)
+                    EventManager.Instance.BulletFired(atk.Spawn(0, 0, 0));
                 attackQueue.RemoveAt(i);
             }
         }
