@@ -21,8 +21,11 @@ public class EnemyInventory : MonoBehaviour
 
         foreach (ActiveItem item in actives)
         {
-            ActiveItem m = Instantiate(item);
-            act.Add(m);
+            if (item.isEnemyCompatible)
+            {
+                ActiveItem m = Instantiate(item);
+                act.Add(m);
+            }
         }
 
         actives = act;
@@ -38,8 +41,11 @@ public class EnemyInventory : MonoBehaviour
 
         foreach (PassiveItem item in passives)
         {
-            PassiveItem m = Instantiate(item);
-            pass.Add(m);
+            if (item.isEnemyCompatible)
+            {
+                PassiveItem m = Instantiate(item);
+                pass.Add(m);
+            }
         }
 
         passives = pass;

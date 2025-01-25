@@ -47,6 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Glock
   desc: Hand in the air!
+  isEnemyCompatible: 1
   icon: {fileID: 6656814654079848548, guid: 8d18b3883977e2a4f9be1e54387ed144, type: 3}
   rarity: 0
   charging: 0

@@ -47,6 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Flamethrower
   desc: Its kinda hot
+  isEnemyCompatible: 1
   icon: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   rarity: 2
   charging: 0

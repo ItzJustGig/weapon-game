@@ -35,29 +35,33 @@ public class GenerateShop : GenerateRandomItem
     {
         base.Pick();
 
-        Item.Rarity rarity = floorItem.item.rarity;
-        int min = 0;
-        int max = 0;
-        switch (rarity)
+        if (floorItem is ShopItem shop)
         {
-            case Item.Rarity.COMMON:
-                (min, max) = (gold[0].minGold, gold[0].maxGold);
-                break;
-            case Item.Rarity.UNCOMMON:
-                (min, max) = (gold[1].minGold, gold[1].maxGold);
-                break;
-            case Item.Rarity.RARE:
-                (min, max) = (gold[2].minGold, gold[2].maxGold);
-                break;
-            case Item.Rarity.EPIC:
-                (min, max) = (gold[3].minGold, gold[3].maxGold);
-                break;
-            case Item.Rarity.LEGENDARY:
-                (min, max) = (gold[4].minGold, gold[4].maxGold);
-                break;
-        }
+            Item.Rarity rarity = floorItem.item.rarity;
+            int min = 0;
+            int max = 0;
+            switch (rarity)
+            {
+                case Item.Rarity.COMMON:
+                    (min, max) = (gold[0].minGold, gold[0].maxGold);
+                    break;
+                case Item.Rarity.UNCOMMON:
+                    (min, max) = (gold[1].minGold, gold[1].maxGold);
+                    break;
+                case Item.Rarity.RARE:
+                    (min, max) = (gold[2].minGold, gold[2].maxGold);
+                    break;
+                case Item.Rarity.EPIC:
+                    (min, max) = (gold[3].minGold, gold[3].maxGold);
+                    break;
+                case Item.Rarity.LEGENDARY:
+                    (min, max) = (gold[4].minGold, gold[4].maxGold);
+                    break;
+            }
 
-        value = UnityEngine.Random.Range(min, max+1);
-        text.text = value.ToString("0G");
+            value = UnityEngine.Random.Range(min, max + 1);
+            text.text = value.ToString("0G");
+            shop.price = value;
+        }
     }
 }

@@ -47,6 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Electric Bullets
   desc: Shocking!
+  isEnemyCompatible: 1
   icon: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
   rarity: 1
   charging: 0

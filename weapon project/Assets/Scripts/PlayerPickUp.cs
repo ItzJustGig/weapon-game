@@ -15,11 +15,22 @@ public class PlayerPickUp : MonoBehaviour
         if (collision != null && collision.CompareTag("Items")){
             bool cancel = false;
             FloorItem floorItem = collision.GetComponent<FloorItem>();
-
             
             if (this.gameObject.GetComponentInParent<PlayerInventory>().actives.Count >= 4 && floorItem.item is ActiveItem)
             {
                  cancel = true;
+            }
+
+            if (floorItem is ShopItem shop && !cancel)
+            {
+                if (shop.price <= this.gameObject.GetComponentInParent<PlayerInventory>().gold)
+                {
+                    this.gameObject.GetComponentInParent<PlayerInventory>().gold -= shop.price;
+                }
+                else
+                {
+                    cancel = true;
+                }
             }
 
             if (!cancel)
