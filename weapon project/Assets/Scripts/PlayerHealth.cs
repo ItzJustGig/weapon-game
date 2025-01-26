@@ -4,9 +4,20 @@ public class PlayerHealth : MonoBehaviour
 {  
     public float health, maxHealth;
 
-    public void TakeDamage(float amount)
+    public void Heal(float amount)
     {
-        health -= amount;
+        health += amount;
+
+        if (health > maxHealth)
+        {
+            health = maxHealth;
+        }
+        EventManager.Instance.OnDamage();
+    }
+
+    public void TakeDamage()
+    {
+        health -= 1;
         EventManager.Instance.OnDamage();
         if (health <= 0)
         {
