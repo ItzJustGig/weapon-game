@@ -33,13 +33,18 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag != owner.gameObject.tag)
+        string tag = collision.tag;
+        if (collision.gameObject.tag == "PickArea")
         {
-            Debug.Log(collision.gameObject.tag);
-            if (collision.tag == "Player")
+            tag = "Player";
+        }
+
+        if (tag != owner.gameObject.tag)
+        {
+            if (tag == "Player")
             {
                 HitPlayer();
-            } else if (collision.tag == "Enemy")
+            } else if (tag == "Enemy")
             {
                 HitEnemy(collision.gameObject);
             }
