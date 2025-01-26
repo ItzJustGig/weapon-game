@@ -13,7 +13,8 @@ public abstract class ActiveItem : Item
     public override void OnPickUp()
     {
     }
-    public abstract void Active();
+
+    public abstract void Active(Vector2 direction);
 
     protected override void OnDestroy()
     {

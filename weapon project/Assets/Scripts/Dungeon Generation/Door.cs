@@ -35,9 +35,20 @@ public class Door : MonoBehaviour
         }
     }
 
+    public void ToggleLock(bool open)
+    {
+        GetComponentInChildren<Collider2D>().enabled = open;
+    }
+
     private void ChangeRooms()
     {
         moveCameras = true;
-        player.transform.position = myDestinationPos;
+
+        // Position the player near door entered.
+        if (name.Contains("Left")) player.transform.position = new Vector3(myDestinationPos.x + 7.3f, myDestinationPos.y, myDestinationPos.z);
+        if (name.Contains("Right")) player.transform.position = new Vector3(myDestinationPos.x - 7.3f, myDestinationPos.y, myDestinationPos.z);
+        if (name.Contains("Bottom")) player.transform.position = new Vector3(myDestinationPos.x, myDestinationPos.y + 3.3f, myDestinationPos.z);
+        if (name.Contains("Top")) player.transform.position = new Vector3(myDestinationPos.x, myDestinationPos.y - 3.3f, myDestinationPos.z);
     }
+
 }

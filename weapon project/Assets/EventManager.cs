@@ -26,20 +26,53 @@ public class EventManager : MonoBehaviour
      * ---
     */
 
+    public static EventManager Instance { get; private set; }
+
     public static event Action OnItemPickedUp;
     public static event Action<GameObject> OnBulletFired;
+    public static event Action<GameObject, GameObject> OnBulletHitEnemy;
     public static event Action OnEnterNewRoom;
     public static event Action OnExitRoom;
     public static event Action OnBossKill;
     public static event Action OnEnemyKill;
+    public static event Action OnPlayerDamaged;
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this; // Assign the current instance
+            DontDestroyOnLoad(gameObject); // Optional: Persist across scenes
+        }
+        else
+        {
+            Destroy(gameObject); // Enforce Singleton pattern
+        }
+    }
 
     public void BulletFired(GameObject proj)
     {
-        OnBulletFired?.Invoke(proj);
+        if (proj != null)
+            OnBulletFired?.Invoke(proj);
+    }
+
+    public void BulletHitEnemy(GameObject target, GameObject proj)
+    {
+        if (target != null)
+            OnBulletHitEnemy?.Invoke(target, proj);
     }
     
     public void PickUpItem()
     {
         OnItemPickedUp?.Invoke();
+    }
+
+    public void EnemyKilled()
+    {
+        OnEnemyKill?.Invoke();
+    }
+
+    public void OnDamage()
+    {
+        OnPlayerDamaged?.Invoke();
     }
 }

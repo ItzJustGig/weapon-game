@@ -47,8 +47,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Electric Bullets
   desc: Shocking!
+  isEnemyCompatible: 0
   icon: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
-  rarity: 0
+  rarity: 1
   charging: 0
   cooldown: 0
   modifier:
@@ -60,6 +61,10 @@ MonoBehaviour:
     projectileLifeTime: 0
     projectileTravelSpeed: 0
   color: {r: 1, g: 0.927565, b: 0, a: 1}
+  chainRange: 3
+  chainTimes: 3
+  dmgReduc: 0.2
+  bonusProjSpeed: 0.4
 --- !u!1 &2030765053405273488
 GameObject:
   m_ObjectHideFlags: 0
