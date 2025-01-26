@@ -51,7 +51,7 @@ MonoBehaviour:
   icon: {fileID: 1888693998, guid: d305da42777f7fe418e64178c7990895, type: 3}
   rarity: 1
   charging: 0
-  cooldown: 0
+  cooldown: 3
   lifeTime: 3
   travelSpeed: 5
   damage: 3

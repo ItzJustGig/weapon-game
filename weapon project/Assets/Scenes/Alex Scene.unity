@@ -232,29 +232,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5312800173083037666, guid: 15d84253e99cda64eb98ab3e85cbb4f1, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6266972964317126420, guid: 15d84253e99cda64eb98ab3e85cbb4f1, type: 3}
       propertyPath: m_Name
       value: Test Enemy
       objectReference: {fileID: 0}
-    - target: {fileID: 6266972964317126420, guid: 15d84253e99cda64eb98ab3e85cbb4f1, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266972964317126420, guid: 15d84253e99cda64eb98ab3e85cbb4f1, type: 3}
-      propertyPath: m_TagString
-      value: Enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 8247560549631048002, guid: 15d84253e99cda64eb98ab3e85cbb4f1, type: 3}
-      propertyPath: generateInventory
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8247560549631048002, guid: 15d84253e99cda64eb98ab3e85cbb4f1, type: 3}
       propertyPath: actives.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8247560549631048002, guid: 15d84253e99cda64eb98ab3e85cbb4f1, type: 3}
       propertyPath: 'actives.Array.data[0]'
@@ -457,7 +441,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8247560549631048002, guid: 15d84253e99cda64eb98ab3e85cbb4f1, type: 3}
       propertyPath: actives.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8247560549631048002, guid: 15d84253e99cda64eb98ab3e85cbb4f1, type: 3}
       propertyPath: passives.Array.size
@@ -944,10 +928,6 @@ PrefabInstance:
     - target: {fileID: 1497809392515264609, guid: e5d098dda93a6a443b4b25ac27e58f87, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2635480662311339123, guid: e5d098dda93a6a443b4b25ac27e58f87, type: 3}
-      propertyPath: m_TagString
-      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

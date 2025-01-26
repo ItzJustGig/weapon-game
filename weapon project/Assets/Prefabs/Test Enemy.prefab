@@ -155,8 +155,9 @@ MonoBehaviour:
   passives: []
   activeItemsGO: {fileID: 8377077957225571060, guid: 5b7569e7f1f19ad4c973ed4ff7cbf431, type: 3}
   passiveItemsGO: {fileID: 8377077957225571060, guid: b13c2c5bfad14ca45abda37797a90941, type: 3}
-  generateInventory: 0
+  generateInventory: 1
   attackInterval: 0
+  attackTimer: 0
 --- !u!50 &6483131823145865806
 Rigidbody2D:
   serializedVersion: 5
