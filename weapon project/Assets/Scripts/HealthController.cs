@@ -47,6 +47,7 @@ public class HealthController : MonoBehaviour
     {
         GameObject newHeart = Instantiate(heartPrefab);
         newHeart.transform.SetParent(transform);
+        newHeart.transform.localScale = new Vector3(1, 1, 1); // Evitar que o coração fique com uma escala ridículamente grande
 
         Health heartComponent = newHeart.GetComponent<Health>();
         heartComponent.SetHeartImage(HeartStatus.Empty);
