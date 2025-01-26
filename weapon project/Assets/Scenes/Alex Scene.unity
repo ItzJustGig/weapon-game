@@ -457,7 +457,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8247560549631048002, guid: 15d84253e99cda64eb98ab3e85cbb4f1, type: 3}
       propertyPath: actives.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8247560549631048002, guid: 15d84253e99cda64eb98ab3e85cbb4f1, type: 3}
       propertyPath: passives.Array.size
@@ -900,7 +900,7 @@ PrefabInstance:
     - target: {fileID: 1351960482529819314, guid: e5d098dda93a6a443b4b25ac27e58f87, type: 3}
       propertyPath: 'actives.Array.data[0]'
       value: 
-      objectReference: {fileID: 490735095478297788, guid: 8439a930119efa141bafa9bd730f7530, type: 3}
+      objectReference: {fileID: 2657433745449443510, guid: 105d45e2c2a73254ea1bb877bc66e5ec, type: 3}
     - target: {fileID: 1351960482529819314, guid: e5d098dda93a6a443b4b25ac27e58f87, type: 3}
       propertyPath: 'passives.Array.data[0]'
       value: 
@@ -944,6 +944,10 @@ PrefabInstance:
     - target: {fileID: 1497809392515264609, guid: e5d098dda93a6a443b4b25ac27e58f87, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2635480662311339123, guid: e5d098dda93a6a443b4b25ac27e58f87, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

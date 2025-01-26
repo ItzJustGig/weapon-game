@@ -3,8 +3,10 @@ using UnityEngine;
 
 public class ElectroBullet : PassiveItem
 {
-    public Color color;
+    public float electricChance = 0.3f;
 
+    [Header("Electric Stats")]
+    public Color color;
     public float chainRange = 2;
     public float chainTimes = 3;
     public float dmgReduc = 0.2f;
@@ -27,7 +29,8 @@ public class ElectroBullet : PassiveItem
     {
         if (proj.GetComponent<Projectile>() != null 
             && proj.GetComponent<Projectile>().type is Projectile.DamageType.BULLET 
-            && proj.GetComponent<Projectile>().owner == owner)
+            && proj.GetComponent<Projectile>().owner == owner
+            && (Random.Range(0f, 1f) <= electricChance))
         {
             proj.GetComponentInChildren<SpriteRenderer>().color = color;
             proj.AddComponent<ChainAddon>().Initialize(chainRange, chainTimes, dmgReduc, bonusProjSpeed);
