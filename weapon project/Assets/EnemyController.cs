@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.AI;
 
 
 public enum EnemyState
@@ -14,22 +15,32 @@ public enum EnemyState
 public class EnemyController : MonoBehaviour
 {
 
-    GameObject player;
+    public GameObject player;
 
     public EnemyState currState = EnemyState.Wander;
 
     public float range;
     public float attackRange;
     public float speed;
+    public float originalSpeed;
     public float attackCooldown;
+    public float abilityCooldown;
     public float lastAttackTime = 0f;
+    public float lastAbilityTime = 0f;
 
     public bool ableToMove = true;
 
     private bool chooseDirection = false;
     private bool dead = false;
     private Vector3 randomDirection;
-    
+
+    public bool isCharging = false;
+
+
+    //navmesh things
+    [SerializeField] public Transform target;
+
+
 
 
 
@@ -37,7 +48,8 @@ public class EnemyController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");    
+        player = GameObject.FindGameObjectWithTag("Player");
+        originalSpeed = speed;
     }
 
     // Update is called once per frame
@@ -52,10 +64,6 @@ public class EnemyController : MonoBehaviour
 
             case (EnemyState.Follow):
                 Follow();
-                if (IsPlayerInAttackRange(attackRange))
-                {
-                    Attack();
-                }
             break;
 
             case (EnemyState.Die):
@@ -66,14 +74,16 @@ public class EnemyController : MonoBehaviour
         {
             currState = EnemyState.Follow;
 
-        }else if(!IsPlayerInRange(range) && currState != EnemyState.Die)
+        }
+        
+        if(!IsPlayerInRange(range) && currState != EnemyState.Die && !isCharging)
         {
             currState = EnemyState.Wander;
         }
              
     }
 
-    private bool IsPlayerInRange(float range)
+    protected bool IsPlayerInRange(float range)
     {
         
         return Vector3.Distance(transform.position, player.transform.position) <= range;
@@ -88,7 +98,7 @@ public class EnemyController : MonoBehaviour
     private IEnumerator ChooseDirection()
     {
         chooseDirection = true;
-        yield return new WaitForSeconds(Random.Range(2f, 8f));
+        yield return new WaitForSeconds(Random.Range(2f, 5f));
         randomDirection = new Vector3(0, 0, Random.Range(0, 360));
         Quaternion nextRotation = Quaternion.Euler(randomDirection);
         transform.rotation = Quaternion.Lerp(transform.rotation, nextRotation, Random.Range(0.5f, 2.5f));
@@ -112,8 +122,9 @@ public class EnemyController : MonoBehaviour
     public virtual void Follow()
     {
 
-        if(ableToMove)
+        if(ableToMove)        
         transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
+        //agent.SetDestination(target.position); // Move closer with navmesh
 
     }
 
