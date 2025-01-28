@@ -10,8 +10,22 @@ public class HostileRoom : Room
 
     [SerializeField] GameObject testEnemyPrefab;
 
+    [SerializeField] public List<Sprite> levelOneRooms;
+    [SerializeField] public List<Sprite> levelTwoRooms;
+    [SerializeField] public List<Sprite> levelThreeRooms;
+
     private List<Transform> spawnPointObjects = new List<Transform>();
+    private List<List<Sprite>> roomSprites = new List<List<Sprite>>();
     private int totalEnemiesInRoom = 0;
+    private SpriteRenderer spriteRenderer;
+
+    private void Awake() {
+        roomSprites.Add(levelOneRooms);
+        roomSprites.Add(levelTwoRooms);
+        roomSprites.Add(levelThreeRooms);
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        RandomizeRoom();
+    }
 
     private void Start() {
         /* 
@@ -41,6 +55,13 @@ public class HostileRoom : Room
             EventManager.OnEnemyKill += EnemyKilledHandler; // Subscreve ao evento do inimigo morrer
             Destroy(GetComponentInChildren<Collider2D>()); // Já não precisamos disto
         }
+    }
+
+    private void RandomizeRoom()
+    {
+        spriteRenderer.sprite = roomSprites[0][Random.Range(0, levelOneRooms.Count)]; // Trocar o 0 por nível atual no futuro
+        if (Random.value < 0.5) spriteRenderer.flipX = true; // 50% chance de inverter X ou Y para 
+        if (Random.value < 0.5) spriteRenderer.flipY = true; // dar um aspeto diferente à mesma sala.
     }
 
     private void LockMyDoors()
