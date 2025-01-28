@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Fight Room 1_0: -1383541795310477895
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
