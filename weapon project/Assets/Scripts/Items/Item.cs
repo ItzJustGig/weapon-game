@@ -9,6 +9,7 @@ public abstract class Item : MonoBehaviour
     public bool isEnemyCompatible;
     public Sprite icon;
     public Rarity rarity;
+    [SerializeField]
     protected GameObject owner;
 
     public void SetOwner(GameObject owner)
