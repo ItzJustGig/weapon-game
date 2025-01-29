@@ -30,7 +30,7 @@ public class PlayerPickUp : MonoBehaviour
 
                 Destroy(collision.gameObject);
             }
-            else
+            else if (collision.GetComponent<FloorItem>())
             {
                 bool cancel = false;
                 FloorItem floorItem = collision.GetComponent<FloorItem>();
@@ -63,8 +63,8 @@ public class PlayerPickUp : MonoBehaviour
                     Item item = Instantiate(floorItem.item);
                     item.gameObject.SetActive(false);
                     item.OnPickUp();
-                    item.Initialize();
                     item.SetOwner(this.gameObject.transform.parent.gameObject);
+                    item.Initialize();
 
                     if (item is PassiveItem pas)
                     {

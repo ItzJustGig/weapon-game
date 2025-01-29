@@ -18,6 +18,8 @@ public class PlayerInventory : MonoBehaviour
 
     [Header("Others")]
     [SerializeField]
+    GameObject owner;
+    [SerializeField]
     private GameObject dropItem;
 
     private float dropTimer = 1f;
@@ -25,6 +27,7 @@ public class PlayerInventory : MonoBehaviour
 
     private void Start()
     {
+        owner = this.gameObject;
         //Ititialize the player's inventory
 
         //creates an instance of the items that it started with, and saves the instance. then rewrites the start list with
@@ -41,8 +44,8 @@ public class PlayerInventory : MonoBehaviour
         foreach (ActiveItem item in actives)
         {
             item.gameObject.SetActive(false);
+            item.SetOwner(owner);
             item.Initialize();
-            item.SetOwner(this.gameObject);
         }
 
         List<PassiveItem> pass = new List<PassiveItem>();
@@ -58,8 +61,8 @@ public class PlayerInventory : MonoBehaviour
         foreach (PassiveItem item in passives)
         {
             item.gameObject.SetActive(false);
+            item.SetOwner(owner);
             item.Initialize();
-            item.SetOwner(this.gameObject);
         }
     }
 

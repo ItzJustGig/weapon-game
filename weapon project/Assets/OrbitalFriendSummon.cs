@@ -12,8 +12,14 @@ public class OrbitalFriendSummon : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
+        if (!owner)
+        {
+            Destroy(this);
+            return;
+        }
+
         gameObject.transform.position = owner.transform.position;
         Vector3 rt = new Vector3(0, 0, rotatingSpeed);
         gameObject.transform.Rotate(rt);
@@ -22,7 +28,7 @@ public class OrbitalFriendSummon : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision != null && collision.tag == "Projectile" && collision.GetComponent<Projectile>().owner != owner) {
-            if (!collision.GetComponent<Projectile>().destroyOnContact)
+            if (collision.GetComponent<Projectile>().destroyOnContact)
             {
                 Destroy(collision.gameObject);
             }

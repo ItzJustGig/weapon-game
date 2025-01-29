@@ -11,6 +11,7 @@ TagManager:
   - Enemy
   - Projectile
   - PickArea
+  - Summon
   layers:
   - Default
   - TransparentFX

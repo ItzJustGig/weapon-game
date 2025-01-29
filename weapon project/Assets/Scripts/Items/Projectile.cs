@@ -34,7 +34,7 @@ public class Projectile : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         bool ignore = false;
-        if (collision.gameObject.tag == "PickArea")
+        if (collision.gameObject.tag == "PickArea" || collision.gameObject.tag == "Summon")
         {
             ignore = true;
         }

@@ -47,9 +47,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Orbital Friend
   desc: Around the world, around the world
-  isEnemyCompatible: 0
+  isEnemyCompatible: 1
   icon: {fileID: 0}
   rarity: 3
+  owner: {fileID: 0}
   charging: 0
   cooldown: 0
   modifier:
@@ -61,6 +62,7 @@ MonoBehaviour:
     projectileLifeTime: 0
     projectileTravelSpeed: 0
   friendGO: {fileID: 864407634381458528, guid: e0c7e3fd5a8fadd4bbd9e57756ae9b52, type: 3}
+  rotatingSpeed: 1
 --- !u!1 &2030765053405273488
 GameObject:
   m_ObjectHideFlags: 0

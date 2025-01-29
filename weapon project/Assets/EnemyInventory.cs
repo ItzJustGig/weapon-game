@@ -14,12 +14,15 @@ public class EnemyInventory : MonoBehaviour
     private GameObject passiveItemsGO;
 
     [SerializeField]
+    GameObject owner;
+    [SerializeField]
     bool generateInventory = false;
     [SerializeField]
     float attackInterval = 0;
 
     private void Start()
     {
+        owner = this.gameObject;
         if (generateInventory)
         {
             int activeItems = Random.Range(1, 4 + 1);
@@ -66,8 +69,8 @@ public class EnemyInventory : MonoBehaviour
         foreach (ActiveItem item in actives)
         {
             item.gameObject.SetActive(false);
+            item.SetOwner(owner);
             item.Initialize();
-            item.SetOwner(this.gameObject);
         }
 
         List<PassiveItem> pass = new List<PassiveItem>();
@@ -86,8 +89,8 @@ public class EnemyInventory : MonoBehaviour
         foreach (PassiveItem item in passives)
         {
             item.gameObject.SetActive(false);
+            item.SetOwner(owner);
             item.Initialize();
-            item.SetOwner(this.gameObject);
         }
     }
 

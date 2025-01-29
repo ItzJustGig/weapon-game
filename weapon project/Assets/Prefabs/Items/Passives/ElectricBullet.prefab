@@ -50,6 +50,7 @@ MonoBehaviour:
   isEnemyCompatible: 0
   icon: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
   rarity: 1
+  owner: {fileID: 0}
   charging: 0
   cooldown: 0
   modifier:
@@ -60,6 +61,7 @@ MonoBehaviour:
     projectileSpeed: 0
     projectileLifeTime: 0
     projectileTravelSpeed: 0
+  electricChance: 0.3
   color: {r: 1, g: 0.927565, b: 0, a: 1}
   chainRange: 3
   chainTimes: 3
