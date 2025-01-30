@@ -75,4 +75,9 @@ public class EventManager : MonoBehaviour
     {
         OnPlayerDamaged?.Invoke();
     }
+
+    public void EnterNewRoom()
+    {
+        OnEnterNewRoom?.Invoke();
+    }
 }

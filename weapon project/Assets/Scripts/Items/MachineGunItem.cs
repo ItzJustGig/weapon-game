@@ -13,9 +13,13 @@ public class MachineGunItem : ActiveItem
 
     public override void Active(Vector2 direction)
     {
-        for (int i = 0; i < bulletNumber; i++)
+        if (cooldown <= 0)
         {
-            AttackManager.Instance.attackQueue.Add(new AttackQueueObject(bulletInterval*i, lifeTime, travelSpeed, damage, bullet, owner, direction));
+            for (int i = 0; i < bulletNumber; i++)
+            {
+                AttackManager.Instance.attackQueue.Add(new AttackQueueObject(bulletInterval * i, lifeTime, travelSpeed, damage, bullet, owner, direction));
+            }
+            cooldown = maxCooldown;
         }
     }
 }

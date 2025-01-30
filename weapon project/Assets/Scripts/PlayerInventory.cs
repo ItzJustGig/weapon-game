@@ -43,7 +43,6 @@ public class PlayerInventory : MonoBehaviour
 
         foreach (ActiveItem item in actives)
         {
-            item.gameObject.SetActive(false);
             item.SetOwner(owner);
             item.Initialize();
         }
@@ -60,7 +59,6 @@ public class PlayerInventory : MonoBehaviour
 
         foreach (PassiveItem item in passives)
         {
-            item.gameObject.SetActive(false);
             item.SetOwner(owner);
             item.Initialize();
         }

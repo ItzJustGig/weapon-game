@@ -11,12 +11,17 @@ public class ThreeCardItem : ActiveItem
 
     public override void Active(Vector2 direction)
     {
-        Vector2 directionAbove = RotateVector(direction, adjacentCardsAngleOffset);
-        Vector2 directionBelow = RotateVector(direction, -adjacentCardsAngleOffset);
+        if (cooldown <= 0)
+        {
+            Vector2 directionAbove = RotateVector(direction, adjacentCardsAngleOffset);
+            Vector2 directionBelow = RotateVector(direction, -adjacentCardsAngleOffset);
 
-        AttackManager.Instance.attackQueue.Add(new AttackQueueObject(0f, lifeTime, travelSpeed, damage, card, owner, directionAbove)); 
-        AttackManager.Instance.attackQueue.Add(new AttackQueueObject(0f, lifeTime, travelSpeed, damage, card, owner, direction)); 
-        AttackManager.Instance.attackQueue.Add(new AttackQueueObject(0f, lifeTime, travelSpeed, damage, card, owner, directionBelow)); 
+            AttackManager.Instance.attackQueue.Add(new AttackQueueObject(0f, lifeTime, travelSpeed, damage, card, owner, directionAbove));
+            AttackManager.Instance.attackQueue.Add(new AttackQueueObject(0f, lifeTime, travelSpeed, damage, card, owner, direction));
+            AttackManager.Instance.attackQueue.Add(new AttackQueueObject(0f, lifeTime, travelSpeed, damage, card, owner, directionBelow));
+
+            cooldown = maxCooldown;
+        }
     }
 
     Vector2 RotateVector(Vector2 v, float degrees)

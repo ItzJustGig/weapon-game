@@ -1293,6 +1293,7 @@ MonoBehaviour:
     projectileSpeed: 0
     projectileLifeTime: 0
     projectileTravelSpeed: 0
+  owner: {fileID: 0}
   dropItem: {fileID: 7449217395408643048, guid: 064330e680f51d84cb0e32bb56924c31, type: 3}
 --- !u!50 &4337409171329198306
 Rigidbody2D:

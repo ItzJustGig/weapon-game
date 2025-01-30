@@ -19,6 +19,8 @@ public class EnemyInventory : MonoBehaviour
     bool generateInventory = false;
     [SerializeField]
     float attackInterval = 0;
+    [SerializeField]
+    float bonusCooldown = 2;
 
     private void Start()
     {
@@ -68,8 +70,8 @@ public class EnemyInventory : MonoBehaviour
 
         foreach (ActiveItem item in actives)
         {
-            item.gameObject.SetActive(false);
             item.SetOwner(owner);
+            item.maxCooldown += bonusCooldown;
             item.Initialize();
         }
 
@@ -88,8 +90,8 @@ public class EnemyInventory : MonoBehaviour
 
         foreach (PassiveItem item in passives)
         {
-            item.gameObject.SetActive(false);
             item.SetOwner(owner);
+            item.maxCooldown += bonusCooldown;
             item.Initialize();
         }
     }
@@ -117,7 +119,7 @@ public class EnemyInventory : MonoBehaviour
 
             //uses the active
             actives[itemId].Active(direction);
-            attackInterval = actives[itemId].cooldown;
+            attackInterval = actives[itemId].maxCooldown;
         }
     }
 }

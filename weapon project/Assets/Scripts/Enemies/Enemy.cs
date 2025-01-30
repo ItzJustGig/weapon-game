@@ -12,7 +12,7 @@ public class Enemy : MonoBehaviour
         currentHealth = maxHealth;
     }
 
-    private void OnTriggerEnter2D(Collider2D other) {
+    /*private void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("Projectile"))
         {
             Projectile projectile = other.gameObject.GetComponent<Projectile>(); // Referencia à bala que bateu neste indivíduo
@@ -20,7 +20,7 @@ public class Enemy : MonoBehaviour
             if (projectile.owner != this.gameObject) // Outros inimigos podem dar dano a inimigos? Mas não a eles próprios
                 TakeDamage(projectile.damage);
         }
-    }
+    }*/
 
     public void TakeDamage(float amount)
     {

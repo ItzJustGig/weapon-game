@@ -61,7 +61,6 @@ public class PlayerPickUp : MonoBehaviour
                     textAnimator.SetTrigger("pickup");
 
                     Item item = Instantiate(floorItem.item);
-                    item.gameObject.SetActive(false);
                     item.OnPickUp();
                     item.SetOwner(this.gameObject.transform.parent.gameObject);
                     item.Initialize();

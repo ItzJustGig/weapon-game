@@ -50,6 +50,7 @@ public class HostileRoom : Room
         {
             Debug.Log("Player's first visit, locking doors!");
             LockMyDoors();
+            EventManager.Instance.EnterNewRoom();
             totalEnemiesInRoom = Random.Range(minEnemiesToSpawn, maxEnemiesToSpawn); // Por enquanto random
             SpawnEnemies(totalEnemiesInRoom);
             EventManager.OnEnemyKill += EnemyKilledHandler; // Subscreve ao evento do inimigo morrer

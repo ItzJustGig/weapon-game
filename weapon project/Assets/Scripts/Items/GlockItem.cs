@@ -10,6 +10,10 @@ public class GlockItem : ActiveItem
 
     public override void Active(Vector2 direction)
     {
-        AttackManager.Instance.attackQueue.Add(new AttackQueueObject(0f, lifeTime, travelSpeed, damage, bullet, owner, direction));
+        if (cooldown <= 0)
+        {
+            AttackManager.Instance.attackQueue.Add(new AttackQueueObject(0f, lifeTime, travelSpeed, damage, bullet, owner, direction));
+            cooldown = maxCooldown;
+        }
     }
 }

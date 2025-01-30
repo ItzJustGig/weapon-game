@@ -14,13 +14,17 @@ public class FlameThrowerItem : ActiveItem
 
     public override void Active(Vector2 direction)
     {
-        bulletNumber = fireDuration/lifeTime;
-        bulletNumber *= 5;
-        bulletInterval = fireDuration / bulletNumber;
-
-        for (int i = 0; i < bulletNumber; i++)
+        if (cooldown <= 0)
         {
-            AttackManager.Instance.attackQueue.Add(new AttackQueueObject(bulletInterval*i, lifeTime, travelSpeed, damage, bullet, owner, direction));
+            bulletNumber = fireDuration / lifeTime;
+            bulletNumber *= 5;
+            bulletInterval = fireDuration / bulletNumber;
+
+            for (int i = 0; i < bulletNumber; i++)
+            {
+                AttackManager.Instance.attackQueue.Add(new AttackQueueObject(bulletInterval * i, lifeTime, travelSpeed, damage, bullet, owner, direction));
+            }
+            cooldown = maxCooldown;
         }
     }
 }

@@ -41,11 +41,13 @@ public class Projectile : MonoBehaviour
 
         if (collision.tag != owner.gameObject.tag && !ignore)
         {
-            if (collision.tag == "Player")
+            if (collision.tag == "Player" && owner.gameObject.tag != "Player")
             {
                 HitPlayer();
-            } else if (collision.tag == "Enemy")
+            } else if (collision.tag == "Enemy" && owner.gameObject.tag != "Enemy")
             {
+                Debug.Log(collision.gameObject.tag);
+                Debug.Log(owner.gameObject.tag);
                 HitEnemy(collision.gameObject);
             }
 
@@ -63,6 +65,7 @@ public class Projectile : MonoBehaviour
 
     public void HitEnemy(GameObject target)
     {
+        target.GetComponent<Enemy>().TakeDamage(damage);
         EventManager.Instance.BulletHitEnemy(target, this.gameObject);
     }
 }
