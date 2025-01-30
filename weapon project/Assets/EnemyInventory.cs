@@ -94,6 +94,8 @@ public class EnemyInventory : MonoBehaviour
             item.maxCooldown += bonusCooldown;
             item.Initialize();
         }
+
+        attackInterval = 1.2f;
     }
 
     private void Update()

@@ -47,7 +47,7 @@ MonoBehaviour:
   name: Slot Machine
   desc: Im not addicted I swear!
   isEnemyCompatible: 0
-  icon: {fileID: -6503962825414336194, guid: 8d18b3883977e2a4f9be1e54387ed144, type: 3}
+  icon: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   rarity: 4
   owner: {fileID: 0}
   charging: 1

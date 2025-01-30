@@ -1,7 +1,10 @@
 using NUnit.Framework;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEditor.Rendering;
 using UnityEngine;
+using static Unity.Burst.Intrinsics.X86.Avx;
+using static UnityEditor.Progress;
 using static UnityEditor.ShaderData;
 
 public class PlayerInventory : MonoBehaviour
@@ -11,7 +14,10 @@ public class PlayerInventory : MonoBehaviour
     public float keys;
     public List<ActiveItem> actives;
     public List<PassiveItem> passives;
-
+    public SkillIcon skill1;
+    public SkillIcon skill2;
+    public SkillIcon skill3;
+    public SkillIcon skill4;
 
     [Header("Stats")]
     public Stats bonusStats;
@@ -62,6 +68,8 @@ public class PlayerInventory : MonoBehaviour
             item.SetOwner(owner);
             item.Initialize();
         }
+
+        UpdateInventory();
     }
 
     private void Update()
@@ -133,12 +141,20 @@ public class PlayerInventory : MonoBehaviour
 
                 //saves the instance of the dropped item, then destroys it
                 ActiveItem toDiscard = actives[tmp];
-                actives.Remove(actives[tmp]);
+                actives.RemoveAt(tmp);
                 Destroy(toDiscard.gameObject);
-
+                UpdateInventory();
                 //resets the drop timer
                 curDropTimer = 0;
             }
         }
+    }
+
+    public void UpdateInventory()
+    {
+        skill1.Setup((actives.Count() > 0 && actives[0] != null) ? actives[0] : null);
+        skill2.Setup((actives.Count() > 1 && actives[1] != null) ? actives[1] : null);
+        skill3.Setup((actives.Count() > 2 && actives[2] != null) ? actives[2] : null);
+        skill4.Setup((actives.Count() > 3 && actives[3] != null) ? actives[3] : null);
     }
 }

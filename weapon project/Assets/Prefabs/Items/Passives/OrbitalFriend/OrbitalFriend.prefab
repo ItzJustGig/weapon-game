@@ -47,7 +47,7 @@ MonoBehaviour:
   name: Orbital Friend
   desc: Around the world, around the world
   isEnemyCompatible: 1
-  icon: {fileID: 0}
+  icon: {fileID: -8276262488406422588, guid: 03900b9a2f8052f49957714815254ad3, type: 3}
   rarity: 3
   owner: {fileID: 0}
   charging: 0

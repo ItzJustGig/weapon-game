@@ -74,6 +74,8 @@ public class PlayerPickUp : MonoBehaviour
                         this.gameObject.GetComponentInParent<PlayerInventory>().actives.Add(act);
                     }
 
+                    this.gameObject.GetComponentInParent<PlayerInventory>().UpdateInventory();
+
                     Destroy(collision.gameObject);
                 }
             }
